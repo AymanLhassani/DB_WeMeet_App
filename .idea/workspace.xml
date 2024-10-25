@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ad375ee8-2469-4b3f-b2b4-607d9280192d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/WeMeet-App.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/WeMeet-App.ipr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/WeMeet-App.iws" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/app/controllers/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/app/models/MEETING.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/app/models/SPACEMEETING.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/app/models/USUARI.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/app/views/Application/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/app/views/errors/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/app/views/errors/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/app/views/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/conf/application.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/conf/dependencies.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/conf/messages" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/conf/routes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/documentation/files/manual.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/documentation/files/wiki.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/documentation/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/documentation/template.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/documentation/welcome.textile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/logs/system.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/modules/docviewer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/public/images/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/public/javascripts/jquery-1.6.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/public/stylesheets/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/server.pid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/test/Application.test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/test/ApplicationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/test/BasicTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/test/data.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/DocViewerPlugin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/_app_views_Application_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/_app_views_errors_404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/_app_views_errors_500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/_app_views_main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/_play__framework_templates_errors_404.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/_play__framework_templates_tags_404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/_play__framework_templates_tags_500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/_play__framework_templates_tags_welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/_play__framework_templates_tags_welcome_en.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/controllers.Application" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/controllers.PlayDocumentation" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/controllers.ProjectDocumentation" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/helpers.CheatSheetHelper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/helpers.CheatSheetHelper$1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/helpers.CheatSheetHelper$2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/helpers.CheatSheetHelper$3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/helpers.CheatSheetHelper$4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/helpers.LangMenuHelper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/helpers.LangMenuHelper$1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/helpers.LangMenuHelper$LangMenu" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/models.Meeting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/models.SpaceMeeting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/bytecode/DEV/models.Usuari" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/DocViewerPlugin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/controllers/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/controllers/PlayDocumentation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/controllers/ProjectDocumentation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/helpers/CheatSheetHelper$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/helpers/CheatSheetHelper$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/helpers/CheatSheetHelper$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/helpers/CheatSheetHelper$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/helpers/CheatSheetHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/helpers/LangMenuHelper$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/helpers/LangMenuHelper$LangMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/helpers/LangMenuHelper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/models/Meeting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/models/SpaceMeeting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/models/Usuari.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/production/WeMeet-App/play.plugins" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/production/WeMeet-App/views/Application/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/production/WeMeet-App/views/PlayDocumentation/cheatSheet.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/production/WeMeet-App/views/PlayDocumentation/page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/production/WeMeet-App/views/PlayDocumentation/releases.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/production/WeMeet-App/views/errors/404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/production/WeMeet-App/views/errors/500.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/production/WeMeet-App/views/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/test/WeMeet-App/Application.test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App/tmp/classes/test/WeMeet-App/data.yml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "EnricSole7"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/AymanLhassani/DB_WeMeet_App.git",
+    "accountId": "daf50670-3814-4cee-861c-2537dbc8eec1"
+  }
+}]]></component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="2nvlMy29vyCVx63kxLOscAHskve" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ad375ee8-2469-4b3f-b2b4-607d9280192d" name="Changes" comment="" />
+      <created>1729861385987</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729861385987</updated>
+    </task>
+    <servers />
+  </component>
+</project>
