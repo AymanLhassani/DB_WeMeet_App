@@ -10,9 +10,12 @@ import models.*;
 public class Application extends Controller {
 
     public static void index() {
-        render();
+        renderTemplate("Application/login.html");
     }
 
+    public static void register() {
+        renderTemplate("Application/register.html");
+    }
 
     public static void startDB() {
         USUARI ob1 = new USUARI("ayman", "1234", 3, 1);
@@ -24,7 +27,7 @@ public class Application extends Controller {
 
     }
 
-    public static void RegisterC(String n, String p){
+    public static void Register(String n, String p){
         //los dos parametros restantes sera 0 por defecto, ya que el cliente es nuevo
         USUARI c = USUARI.find("byNameAndPassword", n, p).first();
 
