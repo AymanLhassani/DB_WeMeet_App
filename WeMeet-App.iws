@@ -4,24 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b91cc7c5-d5b1-49ba-ad96-73e8ee6504c1" name="Changes" comment="First Commit">
-      <change afterPath="$PROJECT_DIR$/app/views/Application/login.html" afterDir="false" />
+    <list default="true" id="b91cc7c5-d5b1-49ba-ad96-73e8ee6504c1" name="Changes" comment="Login/Register changes HTML">
+      <change afterPath="$PROJECT_DIR$/app/views/Application/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/Application/init.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeMeet-App.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeMeet-App.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/DocViewerPlugin" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/DocViewerPlugin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_errors_500.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_errors_500.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/MEETING.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/MEETING.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/SPACEMEETING.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/SPACEMEETING.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/USUARI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/USER.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Application/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_errors_404.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_errors_404.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.PlayDocumentation" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.PlayDocumentation" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Meeting" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Meeting" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.SpaceMeeting" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.SpaceMeeting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Usuari" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Usuari" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/DocViewerPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/DocViewerPlugin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/PlayDocumentation.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/PlayDocumentation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/models/Meeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Meeting.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/models/SpaceMeeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/SpaceMeeting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Usuari.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Usuari.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/Application/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/cheatSheet.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/cheatSheet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/releases.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/releases.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -85,6 +90,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "Enric",
     "kotlin-language-version-configured": "true",
@@ -94,7 +100,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "vcs.Git",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -132,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729862017003</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Login/Register changes HTML">
+      <option name="closed" value="true" />
+      <created>1731070669543</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731070669543</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +182,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+    <MESSAGE value="Login/Register changes HTML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login/Register changes HTML" />
   </component>
 </project>
