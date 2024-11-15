@@ -29,7 +29,7 @@ public class Application extends Controller {
         USUARI c = USUARI.find("byNameAndPassword", n, p).first();
 
         if (c == null) {
-            new USUARI(n, p, 0, 0).save();
+            new USUARI(n, p, 0, 1).save();
             renderText("Usuario dado de alta");//envia mensaje al cliente
         }else{
             renderText("Usuario existente");
