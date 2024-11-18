@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b91cc7c5-d5b1-49ba-ad96-73e8ee6504c1" name="Changes" comment="2n commit">
+      <change afterPath="$PROJECT_DIR$/WeMeet-App.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WeMeet-App.ipr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WeMeet-App.iws" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/MEETING.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/SPACEMEETING.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/models/USUARI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/Application/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/Application/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/errors/404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/errors/500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/application.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/dependencies.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/messages" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/routes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/files/manual.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/files/wiki.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/images/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/documentation/welcome.textile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/system.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/modules/docviewer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/jquery-1.6.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server.pid" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Application.test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/ApplicationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/BasicTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/data.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/DocViewerPlugin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_errors_404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_errors_500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_main.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_play__framework_templates_errors_404.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_play__framework_templates_tags_404.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_play__framework_templates_tags_500.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_play__framework_templates_tags_welcome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_play__framework_templates_tags_welcome_en.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.PlayDocumentation" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.ProjectDocumentation" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper$1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper$2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper$3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.CheatSheetHelper$4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.LangMenuHelper" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.LangMenuHelper$1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/helpers.LangMenuHelper$LangMenu" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Meeting" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.SpaceMeeting" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Usuari" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/DocViewerPlugin.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/controllers/PlayDocumentation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/controllers/ProjectDocumentation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/helpers/CheatSheetHelper$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/helpers/CheatSheetHelper$2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/helpers/CheatSheetHelper$3.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/helpers/CheatSheetHelper$4.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/helpers/CheatSheetHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/helpers/LangMenuHelper$1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/helpers/LangMenuHelper$LangMenu.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/helpers/LangMenuHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/models/Meeting.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/models/SpaceMeeting.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tmp/classes/models/Usuari.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/ayman" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AymanLhassani&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AymanLhassani/DB_WeMeet_App&quot;,
+    &quot;accountId&quot;: &quot;22de2b4e-4995-4220-a597-ad691c452303&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2meQTFdan6En3t9ozu4LNiv3jCa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/play-1.5.3/WeMeet-App",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b91cc7c5-d5b1-49ba-ad96-73e8ee6504c1" name="Changes" comment="" />
+      <created>1727434567844</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1727434567844</updated>
+      <workItem from="1727434568878" duration="3307000" />
+      <workItem from="1727437891828" duration="4000" />
+      <workItem from="1727885100306" duration="4084000" />
+      <workItem from="1727890328685" duration="3108000" />
+      <workItem from="1728042007947" duration="658000" />
+      <workItem from="1728207422379" duration="75000" />
+      <workItem from="1728641326899" duration="5581000" />
+      <workItem from="1729851498463" duration="788000" />
+      <workItem from="1729853286485" duration="3000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="2n commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="2n commit" />
+  </component>
+</project>

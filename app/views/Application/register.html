@@ -1,0 +1,16 @@
+#{extends 'main.html' /}
+#{set title:'Register' /}
+
+<h1>Register</h1>
+
+#{form @RegisterC()}
+<p>
+    <strong>Username:</strong> <input type="text" name="n" size="16"> *
+</p>
+<p>
+    <strong>Password:</strong> <input type="password" name="p" size="16" > *
+</p>
+<p class="buttons">
+    <input type="submit" value="Register"> <a href="@{register()}">Cancel</a>
+</p>
+#{/form}
