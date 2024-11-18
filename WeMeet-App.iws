@@ -4,28 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b91cc7c5-d5b1-49ba-ad96-73e8ee6504c1" name="Changes" comment="Login/Register changes HTML">
-      <change afterPath="$PROJECT_DIR$/app/views/Application/home.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/views/Application/init.html" afterDir="false" />
+    <list default="true" id="b91cc7c5-d5b1-49ba-ad96-73e8ee6504c1" name="Changes" comment="commit 2n">
+      <change afterPath="$PROJECT_DIR$/app/views/Application/listSpace.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeMeet-App.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeMeet-App.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/MEETING.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/MEETING.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/SPACEMEETING.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/SPACEMEETING.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/USUARI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/USER.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/DocViewerPlugin" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/DocViewerPlugin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_errors_404.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_errors_404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_errors_500.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_errors_500.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Meeting" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Meeting" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.SpaceMeeting" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.SpaceMeeting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.PlayDocumentation" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.PlayDocumentation" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/DocViewerPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/DocViewerPlugin.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/PlayDocumentation.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/PlayDocumentation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Meeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Meeting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/models/SpaceMeeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/SpaceMeeting.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/Application/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/cheatSheet.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/cheatSheet.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/releases.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/releases.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,9 +44,6 @@
     &quot;assignee&quot;: &quot;EnricSole7&quot;
   }
 }</component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="daf50670-3814-4cee-861c-2537dbc8eec1" />
-  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/AymanLhassani/DB_WeMeet_App.git&quot;,
@@ -92,7 +79,7 @@
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Enric",
+    "git-widget-placeholder": "ayman",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/HP/Documents/UNI/EETAC/3r/Q1/PES/IntelliJ/play-1.5.3/WeMeet-App",
     "node.js.detected.package.eslint": "true",
