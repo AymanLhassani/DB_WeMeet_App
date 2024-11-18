@@ -8,15 +8,16 @@
             <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" />
             <sourceFolder url="file://$MODULE_DIR$/test" isTestSource="true" />
         </content>
-                <content url="file://C:\Users\HP\Documents\UNI\EETAC\3r\Q1\PES\IntelliJ\play-1.5.3\modules\docviewer">
-            <sourceFolder url="file://C:/Users/HP/Documents/UNI/EETAC/3r/Q1/PES/IntelliJ/play-1.5.3/modules/docviewer/app" isTestSource="false" />
+                <content url="file://C:\play-1.5.3\modules\docviewer">
+            <sourceFolder url="file://C:/play-1.5.3/modules/docviewer/app" isTestSource="false" />
         </content>
 
         <orderEntry type="inheritedJdk" />
         <orderEntry type="module-library">
             <library name="Project Libraries">
                 <CLASSES>
-                                        <root url="file://$MODULE_DIR$/../modules/docviewer/lib"/>
+                    <root url="file://$MODULE_DIR$/lib" />
+                    <root url="file://$MODULE_DIR$/../modules/docviewer/lib"/>
 
                 </CLASSES>
                 <JAVADOC />
@@ -32,21 +33,21 @@
         <orderEntry type="module-library">
             <library name="PlayFramework Dependencies">
                 <CLASSES>
-                    <root url="file://C:/Users/HP/Documents/UNI/EETAC/3r/Q1/PES/IntelliJ/play-1.5.3/framework/lib" />
+                    <root url="file://C:/play-1.5.3/framework/lib" />
                 </CLASSES>
                 <JAVADOC />
                 <SOURCES />
-                <jarDirectory url="file://C:/Users/HP/Documents/UNI/EETAC/3r/Q1/PES/IntelliJ/play-1.5.3/framework/lib" recursive="false" />
+                <jarDirectory url="file://C:/play-1.5.3/framework/lib" recursive="false" />
             </library>
         </orderEntry>
         <orderEntry type="module-library">
             <library>
                 <CLASSES>
-                    <root url="jar://C:/Users/HP/Documents/UNI/EETAC/3r/Q1/PES/IntelliJ/play-1.5.3/framework/play-1.5.3.jar!/" />
+                    <root url="jar://C:/play-1.5.3/framework/play-1.5.3.jar!/" />
                 </CLASSES>
                 <JAVADOC />
                 <SOURCES>
-                    <root url="file://C:/Users/HP/Documents/UNI/EETAC/3r/Q1/PES/IntelliJ/play-1.5.3/framework/src" />
+                    <root url="file://C:/play-1.5.3/framework/src" />
                 </SOURCES>
             </library>
         </orderEntry>
