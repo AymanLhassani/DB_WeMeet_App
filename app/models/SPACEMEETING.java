@@ -17,7 +17,7 @@ public class SPACEMEETING extends Model {
     public  List<MEETING> Listmeetings = new ArrayList<>();
 
     @ManyToOne
-    public USUARI User_Renter;
+    public USER User_Renter;
 
     public SPACEMEETING(){}
 

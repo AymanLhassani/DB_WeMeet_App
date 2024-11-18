@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b91cc7c5-d5b1-49ba-ad96-73e8ee6504c1" name="Changes" comment="Merge remote-tracking branch 'origin/ayman' into ayman" />
+    <list default="true" id="b91cc7c5-d5b1-49ba-ad96-73e8ee6504c1" name="Changes" comment="Login/Register changes HTML">
+      <change afterPath="$PROJECT_DIR$/app/views/Application/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/views/Application/init.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WeMeet-App.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeMeet-App.iws" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/MEETING.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/MEETING.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/SPACEMEETING.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/SPACEMEETING.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/USUARI.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/USER.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Application/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_errors_404.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_errors_404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Meeting" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Meeting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.SpaceMeeting" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.SpaceMeeting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/DocViewerPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/DocViewerPlugin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/PlayDocumentation.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/PlayDocumentation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Meeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Meeting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/models/SpaceMeeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/SpaceMeeting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/Application/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/cheatSheet.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/cheatSheet.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/releases.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/production/WeMeet-App/views/PlayDocumentation/releases.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +36,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -31,6 +54,9 @@
     &quot;assignee&quot;: &quot;EnricSole7&quot;
   }
 }</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="daf50670-3814-4cee-861c-2537dbc8eec1" />
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/AymanLhassani/DB_WeMeet_App.git&quot;,
@@ -62,34 +88,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;ayman&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/Documents/UNI/EETAC/3r/Q1/PES/IntelliJ/play-1.5.3/WeMeet-App&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Enric",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/HP/Documents/UNI/EETAC/3r/Q1/PES/IntelliJ/play-1.5.3/WeMeet-App",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.General",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -116,21 +130,21 @@
       <option name="project" value="LOCAL" />
       <updated>1729857345680</updated>
     </task>
-    <task id="LOCAL-00002" summary="proba">
+    <task id="LOCAL-00002" summary="First Commit">
       <option name="closed" value="true" />
-      <created>1731936345691</created>
+      <created>1729862017003</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1731936345691</updated>
+      <updated>1729862017003</updated>
     </task>
-    <task id="LOCAL-00003" summary="Merge remote-tracking branch 'origin/ayman' into ayman">
+    <task id="LOCAL-00003" summary="Login/Register changes HTML">
       <option name="closed" value="true" />
-      <created>1731936371256</created>
+      <created>1731070669543</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1731936371256</updated>
+      <updated>1731070669543</updated>
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
@@ -168,10 +182,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
-    <MESSAGE value="2n commit" />
-    <MESSAGE value="proba" />
-    <MESSAGE value="commit 2" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/ayman' into ayman" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/ayman' into ayman" />
+    <MESSAGE value="Login/Register changes HTML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login/Register changes HTML" />
   </component>
 </project>

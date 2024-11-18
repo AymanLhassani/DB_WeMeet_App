@@ -1,13 +1,12 @@
 package models;
 import play.db.jpa.Model;
 import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-public class USUARI extends Model {
+public class USER extends Model {
     public String Name;
     public String Password;
     public int numberTimesRent; //numero de veces que alquila un espacio de alguien
@@ -19,9 +18,9 @@ public class USUARI extends Model {
     @OneToMany(mappedBy = "User_Reserve")
     public List<MEETING> meetings  = new ArrayList<>();
 
-    public USUARI() {}
+    public USER() {}
 
-    public USUARI(String name, String password, int numberRent, int numberR) {
+    public USER(String name, String password, int numberRent, int numberR) {
         this.Name = name;
         this.Password = password;
         this.numberTimesRent = numberRent;

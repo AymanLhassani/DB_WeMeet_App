@@ -1,0 +1,73 @@
+<html lang="en">
+    <head>
+        <title>WeMEET - Login</title>
+        <style>
+            h1 {
+            margin-top: 150px;
+            color: #349028;
+            text-align: center;
+            font-size: 60px;
+            font-family: Impact;
+            }
+            label1 {
+            color: #349028;
+            text-align: center;
+            font-size: 22px;
+            font-family: Perpetua;
+            margin-right: 15px;
+            }
+            input{
+            border-top-style: hidden;
+            border-left-style: hidden;
+            border-right-style: hidden;
+            outline: none;
+            font-family: Perpetua;
+            font-size: 20px;
+            text-align: center;
+            }
+            button{
+            border-radius: 8px;
+            font-family: Perpetua;
+            font-size: 18px;
+            text-align: center;
+            background-color:#FFD700;
+            width: 80px;
+            height: 30px;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <h1>LOGIN</h1>
+
+        #{form @Login(), id:'formLogin'}
+            <p style="margin-left:45.5%;">
+                <label1>Name:</label1>
+                <input type="text" id="1" name="n"/>
+            </p>
+            <p style="margin-left:45.5%;">
+                <label1>Password:</label1>
+                <input type="password" id="2" name="p" style="width: 176px;"/>
+            </p>
+            <br>
+            <p3 style="margin-left:45.5%;">
+                <button type="submit" id="3">DONE</button>
+            </p3>
+            <br>
+            <p>
+                <label1 id="4" onload="Retry(error)" style="display:none;">Incorrect Username or Password</label1>
+            </p>
+
+        #{/form}
+    <!-- ??????????????? -->
+    <script>
+        function Retry(x){
+            if(x == true){
+            document.getElementById("4").style.display = "inline";
+            }
+        }
+    </script>
+
+    </body>
+</html>
