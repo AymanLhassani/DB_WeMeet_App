@@ -33,26 +33,39 @@
     <head>
         <title>WeMEET</title>
         <style>
-          h1 {
-          margin-top:150px;
-          color:#349028;
-          text-align:center;
-          text-decoration-line: underline;
-          text-decoration-color:#349028;
-          font-size:60px;
-          font-family: Impact;
-          }
+            body{
+                background-color:#F6FCDF;
+            }
+            h1 {
+                margin-top:150px;
+                color:#349028;
+                text-align:center;
+                text-decoration-line: underline;
+                text-decoration-color:#349028;
+                font-size:60px;
+                font-family: Impact;
+            }
 
-          button {
-          color:#349028;
-          border-style: hidden;
-          background-color:white;
-          text-align:center;
-          width: 0px;
-          height: 0px;
-          font-size:35px;
-          font-family: Impact;
-          }
+            .button {
+                color:#2A2A19;
+                border-style: hidden;
+                background-color:white;
+                text-align:center;
+                width: 0px;
+                height: 0px;
+                font-size:35px;
+                font-family: Impact;
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+            .button1 {
+                display:inline;
+                color:#2A2A19;
+                border-radius: 5px;
+            }
+            .button1:hover {
+                color:#DEAA69;
+            }
         </style>
         <!-- #347928 #EB8317 -->
     </head>
@@ -62,13 +75,13 @@
       <br>
       #{form @InitLog(), id:'formInit'}
       <p id="1">
-        <button id="11" style="margin-left:47%;">LOGIN</button>
+        <button class="button button1" style="margin-left:47%;">LOGIN</button>
       </p>
       #{/form}
       <br>
       #{form @InitReg(), id:'formInit'}
       <p id="2">
-        <button id="22" style="margin-left:45.5%;">REGISTER</button>
+        <button class="button button1" style="margin-left:45.5%;">REGISTER</button>
       </p>
 
 

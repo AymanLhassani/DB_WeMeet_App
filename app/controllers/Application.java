@@ -4,6 +4,8 @@ import play.mvc.*;
 
 import models.*;
 
+import java.util.List;
+
 public class Application extends Controller
 {
 
@@ -45,7 +47,7 @@ public class Application extends Controller
         {
             USER user = new USER(n, p, 0, 0).save();
             renderArgs.put("ConnectedUser", user);
-            HomeHTML();
+            renderTemplate("Application/home.html");    //equivalent to HomeHTML
         }
         else
         {
@@ -61,12 +63,12 @@ public class Application extends Controller
         {
             String er = "true";
             renderArgs.put("error", er);
-            LoginHTML();
+            renderTemplate("Application/login.html");
         }
         else
         {
             renderArgs.put("ConnectedUser", u);
-            HomeHTML();
+            renderTemplate("Application/home.html");    //equivalent to HomeHTML
         }
     }
 
@@ -79,11 +81,17 @@ public class Application extends Controller
     {
         String er = "false";
         renderArgs.put("error", er);
-        LoginHTML();
+        renderTemplate("Application/login.html");
     }
     public static  void InitReg()
     {
         RegisterHTML();
+    }
+
+    public static void listSpaces(){
+        List<SPACEMEETING> spaces = SPACEMEETING.findAll();
+        render("Application/listspaces.html", spaces);
+
     }
 
 }

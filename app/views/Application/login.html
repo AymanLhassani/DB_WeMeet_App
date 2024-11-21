@@ -2,37 +2,43 @@
     <head>
         <title>WeMEET - Login</title>
         <style>
+            body{
+                background-color:#F6FCDF;
+            }
             h1 {
-            margin-top: 150px;
-            color: #349028;
-            text-align: center;
-            font-size: 60px;
-            font-family: Impact;
+                margin-top: 150px;
+                color: #31711E;
+                text-align: center;
+                font-size: 60px;
+                font-family: Impact;
             }
             label1 {
-            color: #349028;
-            text-align: center;
-            font-size: 22px;
-            font-family: Perpetua;
-            margin-right: 15px;
+                color: #31711E;
+                text-align: center;
+                font-size: 22px;
+                font-weight: bold;
+                font-family: Perpetua;
+                margin-right: 15px;
             }
             input{
-            border-top-style: hidden;
-            border-left-style: hidden;
-            border-right-style: hidden;
-            outline: none;
-            font-family: Perpetua;
-            font-size: 20px;
-            text-align: center;
+                background-color:#F6FCDF;
+                border-top-style: hidden;
+                border-left-style: hidden;
+                border-right-style: hidden;
+                outline: none;
+                font-family: Perpetua;
+                font-size: 20px;
+                text-align: center;
             }
             button{
-            border-radius: 8px;
-            font-family: Perpetua;
-            font-size: 18px;
-            text-align: center;
-            background-color:#FFD700;
-            width: 80px;
-            height: 30px;
+                border-radius: 8px;
+                font-family: Perpetua;
+                font-size: 18px;
+                font-weight: bold;
+                text-align: center;
+                background-color:#85BF3D;
+                width: 100px;
+                height: 30px;
             }
         </style>
 
@@ -42,7 +48,7 @@
         <h1>LOGIN</h1>
 
         #{form @Login(), id:'formLogin'}
-            <p style="margin-left:45.5%;">
+            <p style="margin-left:45.5%; margin-bottom:30px;">
                 <label1>Name:</label1>
                 <input type="text" id="1" name="n"/>
             </p>
