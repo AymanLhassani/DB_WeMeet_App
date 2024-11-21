@@ -20,4 +20,4 @@ public class MEETING extends Model {
         this.numberPeopleMeeting = numberPeopleMeeting;
         this.schedule = schedule;
     }
-}
+        }

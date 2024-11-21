@@ -1,6 +1,6 @@
 <html lang="en">
     <head>
-        <title>WeMEET - Login</title>
+        <title>WeMEET - Register</title>
         <style>
             body{
                 background-color:#8FD14F;
@@ -16,7 +16,6 @@
                 color: #31711E;
                 text-align: center;
                 font-size: 22px;
-                font-weight: bold;
                 font-family: Perpetua;
                 margin-right: 15px;
             }
@@ -41,43 +40,39 @@
                 height: 30px;
             }
         </style>
-
     </head>
 
-    <body onload="Retry(${times})">
-        <h1>LOGIN</h1>
+    <body onload="Retry(${error})">
+        <h1>REGISTER</h1>
 
-        #{form @Login(), id:'formLogin'}
-            <p style="margin-left:45.5%; margin-bottom:30px;">
-                <label1>Name:</label1>
-                <input type="text" id="1" name="n"/>
-            </p>
-            <p style="margin-left:45.5%;">
-                <label1>Password:</label1>
-                <input type="password" id="2" name="p" style="width: 176px;"/>
-            </p>
-            <br>
-            <p3 style="margin-left:45.5%;">
-                <button type="submit" id="3">DONE</button>
-            </p3>
-            <br>
-            <p>
-                <label1 id="4" style="display:none; margin-left:45.5%; margin-top:30px; color:red;">Incorrect Username or Password</label1>
-            </p>
+        #{form @Register(), id:'formRegister'}
+        <p style="margin-left:42.7%; margin-bottom:30px;">
+            <label1>Name:</label1>
+            <input type="text" name="n" id="1"/>
+        </p>
+        <p style="margin-left:42.7%;">
+            <label1>Password:</label1>
+            <input type="password" name="p" id="2"/>
+        </p>
+        <br>
+        <p style="margin-left:42.7%;">
+            <button type="submit" id="3">DONE</button>
+        </p>
+        <br>
+        <p>
+            <label1 id="4" style="display:none; margin-left:45.5%; margin-top:30px; color:red;">User already exists</label1>
+        </p>
 
-            <script>
-                function Retry(x){
-                    if(x == 1){
-                        document.getElementById("4").style.display = "inline";
-                    }
-                    else{
-                        document.getElementById("4").style.display = "none";
-                    }
+        <script>
+            function Retry(x){
+                if(x == 1){
+                    document.getElementById("4").style.display = "inline";
                 }
-            </script>
+            }
+        </script>
         #{/form}
-    <!-- ??????????????? -->
-
 
     </body>
 </html>
+
+

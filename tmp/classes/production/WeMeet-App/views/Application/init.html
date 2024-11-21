@@ -1,0 +1,26 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1></h1>
+<!--
+<p>
+  <a href="https://localhost:9000/Application/LoginHTML" style="display: inline-block; font-size: 16px; font-family: Arial, sans-serif; cursor: pointer;">
+    LOGIN
+  </a>
+</p>
+
+<p>
+  <a href="https://localhost:9000/Application/RegisterHTML" style="display: inline-block; font-size: 16px; font-family: Arial, sans-serif; cursor: pointer;">
+    REGISTER
+  </a>
+</p>
+-->
+#{form @Init(), id:'formInit'}
+  <p id="1">
+    <input type="submit" name="login" value="LOGIN">
+  </p>
+  <p id="2">
+    <input type="submit" name="register" value="REGISTER">
+  </p>
+#{/form}
+

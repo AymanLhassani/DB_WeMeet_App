@@ -1,88 +1,55 @@
-<!--
-<p>
-  <a href="https://localhost:9000/Application/LoginHTML" style="display: inline-block; font-size: 16px; font-family: Arial, sans-serif; cursor: pointer;">
-    LOGIN
-  </a>
-</p>
-
-<p>
-  <a href="https://localhost:9000/Application/RegisterHTML" style="display: inline-block; font-size: 16px; font-family: Arial, sans-serif; cursor: pointer;">
-    REGISTER
-  </a>
-</p>
--->
-<!--
-#{form @InitLog(), id:'formInit'}
-<p id="1">
-  <a href="@{Login()}">LOGIN</a>
-</p>
-
-<p id="2">
-  <button id="22" >REGISTER</button>
-</p>
-
-<script>
-  function InitL(){
-    href
-  }
-</script>
-#{/form}
--->
-
 <html lang="en">
     <head>
         <title>WeMEET</title>
         <style>
-          h1 {
-          margin-top:150px;
-          color:#349028;
-          text-align:center;
-          text-decoration-line: underline;
-          text-decoration-color:#349028;
-          font-size:60px;
-          font-family: Impact;
-          }
+            body{
+                background-color:#8FD14F;
+            }
+            h1 {
+                margin-top:150px;
+                color:#349028;
+                text-align:center;
+                text-decoration-line: underline;
+                text-decoration-color:#349028;
+                font-size:60px;
+                font-family: Impact;
+            }
 
-          button {
-          color:#349028;
-          border-style: hidden;
-          background-color:white;
-          text-align:center;
-          width: 0px;
-          height: 0px;
-          font-size:35px;
-          font-family: Impact;
-          }
+            .button {
+                color:#2A2A19;
+                border-style: hidden;
+                background-color:#8FD14F;
+                text-align:center;
+                width: 0px;
+                height: 0px;
+                font-size:35px;
+                font-family: Impact;
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+            .button1 {
+                display:inline;
+                color:#2A2A19;
+                border-radius: 5px;
+            }
+            .button1:hover {
+                color:#FFCF8D;
+            }
         </style>
-        <!-- #347928 #EB8317 -->
     </head>
 
     <body>
-      <h1>WeMEET</h1>
-      <br>
-      #{form @InitLog(), id:'formInit'}
-      <p id="1">
-        <button id="11" style="margin-left:47%;">LOGIN</button>
-      </p>
-      #{/form}
-      <br>
-      #{form @InitReg(), id:'formInit'}
-      <p id="2">
-        <button id="22" style="margin-left:45.5%;">REGISTER</button>
-      </p>
+        <h1>WeMEET</h1>
+        <br>
+        <p id="1">
+        <a class="button button1" href="@{Login()}" style="margin-left:47%;">LOGIN</a>
+        </p>
+        <br>
+        <p id="2">
+        <a class="button button1" href="@{Register()}" style="margin-left:45.5%;">REGISTER</a>
+        </p>
 
 
-      <!--
-          <p1 id="1">
-            <label href="@{Login()}">LOGIN</label>
-          </p1>
-          <br>
-          <br>
-          <p2 id="2">
-            <a href="@{Register()}">REGISTER</a>
-          </p2>
-          #{/form}
-      -->
     </body>
 </html>
 

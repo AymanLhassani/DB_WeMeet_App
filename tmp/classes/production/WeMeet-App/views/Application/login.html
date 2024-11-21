@@ -1,0 +1,20 @@
+#{extends 'main.html' /}
+#{set title:'Login' /}
+
+<h1>Login</h1>
+
+#{form @Login(), id:'formLogin'}
+    <p class="field" id="1">
+        <label>Name:</label>
+        <input type="text" name="n" size="19" value="${flash.username}" />
+    </p>
+    <p class="field" id="2">
+        <label>Password:</label>
+        <input type="password" name="p" size="19"/>
+    </p>
+    <p class="buttons" id="3">
+        <input type="submit" value="Submit" />
+    </p>
+#{/form}
+
+

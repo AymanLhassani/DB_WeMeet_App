@@ -1,0 +1,300 @@
+<html lang="en">
+<head>
+    <title>WeMEET - Profile</title>
+    <style>
+
+        .div_menu_bar {
+            margin:auto;
+            padding:10px;
+
+            border-style:solid;
+            background-color:#1A1A19;
+            width:98%;
+        }
+
+        body{
+            background-color:#8FD14F;
+        }
+        h1 {
+            display:inline;
+            text-transform: capitalize;
+            color:#31711E;
+            font-size:60px;
+            font-family: Impact;
+            margin-left: 10%;
+            text-transform: capitalize;
+        }
+
+        .button_to_home {
+            background-color:#F2FCDF;
+            text-align:center;
+
+            transition-duration: 0.4s;
+            cursor: pointer;
+            font-size:22px;
+            font-family: Impact;
+            color:#2A2A19;
+            border-radius: 5px;
+            padding: 10px;
+            margin-left: 50px;
+        }
+        .button_to_home:hover {
+            background-color:#34A028;
+        }
+
+        .div_options {
+
+            margin-bottom:0%;
+            margin-left:0.2%;
+            margin-right:60%;
+
+            border-style:solid;
+            border-top:none;
+
+            padding:50px;
+
+            background-color:#1A1A19;
+            text-align:center;
+
+            font-size:25px;
+            font-family: Perpetua;
+        }
+        .button_passwd {
+            background-color:#FFE6A9;
+            text-align:center;
+            font-size:25px;
+            font-family: Impact;
+
+            transition-duration: 0.4s;
+            cursor: pointer;
+
+            color:#2A2A19;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        .button_passwd:hover {
+            background-color:#34A028;
+        }
+        .button_delete {
+            background-color:#FFE6A9;
+            text-align:center;
+            font-size:25px;
+            font-family: Impact;
+
+            transition-duration: 0.4s;
+            cursor: pointer;
+
+            color:#2A2A19;
+            border-radius: 5px;
+            padding: 15px;
+        }
+        .button_delete:hover {
+            background-color:#34A028;
+        }
+
+        .question_delete {
+            font-size:20px;
+            font-family: Impact;
+        }
+
+        .question_password {
+            font-size:20px;
+            font-family: Impact;
+        }
+
+        /* Set a style for the submit/login button */
+        .btn {
+          background-color: #04AA6D;
+          color: white;
+          padding: 16px 20px;
+          border: none;
+          cursor: pointer;
+          width: 75%;
+          margin-top:15px;
+          opacity: 0.8;
+        }
+
+        /* Add a red background color to the cancel button */
+        .cancel {
+        margin-top:15px;
+          background-color: red;
+        }
+
+        /* Add some hover effects to buttons */
+        .btn:hover, .open-button:hover {
+          opacity: 1;
+        }
+
+
+        /*FORM CHANGE PASSWORD*/
+
+        .form-popup_PASSWORD {
+          display: none;
+
+          position: fixed;
+          bottom: 50%;
+          right: 15%;
+          left: 55%;
+          padding: 15px;
+
+          text-align:center;
+
+          border: 3px solid #f1f1f1;
+          z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container_PASSWORD {
+          max-width: 300px;
+          padding: 10px;
+          background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container_PASSWORD input[type=text], .form-container_DELETE input[type=password] {
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          border: none;
+          background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container_PASSWORD input[type=text]:focus, .form-container_PASSWORD input[type=password]:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+
+
+        /*FORM DELETE*/
+
+        .form-popup_DELETE {
+          display: none;
+
+          position: fixed;
+          bottom: 50%;
+          right: 15%;
+          left: 55%;
+          padding: 15px;
+
+          text-align:center;
+
+          border: 3px solid #f1f1f1;
+          z-index: 9;
+        }
+
+        /* Add styles to the form container */
+        .form-container_DELETE {
+          max-width: 300px;
+          padding: 10px;
+          background-color: white;
+        }
+
+        /* Full-width input fields */
+        .form-container_DELETE input[type=text], .form-container_DELETE input[type=password] {
+          width: 100%;
+          padding: 15px;
+          margin: 5px 0 22px 0;
+          border: none;
+          background: #f1f1f1;
+        }
+
+        /* When the inputs get focus, do something */
+        .form-container_DELETE input[type=text]:focus, .form-container_DELETE input[type=password]:focus {
+          background-color: #ddd;
+          outline: none;
+        }
+
+    </style>
+</head>
+
+<!-- optional colors
+    D2FF72  (lime)
+    F6E96B  (sand yellow)
+    8FD14F  (grass green)
+-->
+
+<body>
+    <div class="div_menu_bar">
+        <h1>${ConnectedUser.Name}</h1>
+
+    </div>
+
+
+    #{form @Profile(), id:'formProfile'}
+    <p style="display:inline;">
+
+    </p>
+    <div class="div_options">
+        <p>
+            <a class="button_passwd" onclick="openFormPassword()">CHANGE PASSWORD</a>
+        </p>
+        <br>
+        <p>
+            <a class="button_delete" onclick="openFormDelete()">DELETE ACCOUNT</a>
+        </p>
+    </div>
+
+    <div class="form-popup_PASSWORD" id="myFormPassword">
+        <form action="/action_page.php" class="form-container_PASSWORD">
+            <label class="question_delete">Write your new password, please:</label>
+            <input type="text" id="password" name="do_delete"/>
+
+            <label class="question_delete">Confirm your new password:</label>
+            <input type="text" id="password_check" name="do_delete"/>
+
+            <button type="submit" class="btn" onclick="updateUser()">CONFIRM</button>
+            <button type="button" class="btn cancel" onclick="closeFormPassword()">CANCEL</button>
+            <input style="display:none;" type="text" id="password_confirm" name="do_update"/>
+            <input style="display:none;" type="text" id="password_value" name="new_password"/>
+        </form>
+    </div>
+
+    <div class="form-popup_DELETE" id="myFormDelete">
+        <form action="/action_page.php" class="form-container_DELETE">
+            <label class="question_delete">Are you sure you want to delete your account?</label>
+
+            <button type="submit" class="btn" onclick="deleteUser()">DELETE</button>
+            <button type="button" class="btn cancel" onclick="closeFormDelete()">CANCEL</button>
+            <input style="display:none;" type="text" id="delete_confirm" name="do_delete"/>
+        </form>
+    </div>
+
+
+    <script>
+
+        function openFormPassword() {
+            document.getElementById("myFormPassword").style.display = "block";
+        }
+
+        function closeFormPassword() {
+            document.getElementById("myFormPassword").style.display = "none";
+        }
+
+        function openFormDelete() {
+            document.getElementById("myFormDelete").style.display = "block";
+        }
+
+        function closeFormDelete() {
+            document.getElementById("myFormDelete").style.display = "none";
+        }
+
+        function updateUser() {
+            var p = document.getElementById("password").value;
+            var pc = document.getElementById("password_check").value;
+
+            if(p == pc)
+            {
+                document.getElementById("password_confirm").value = "true";
+                document.getElementById("password_value").value = p;
+            }
+        }
+
+        function deleteUser() {
+            document.getElementById("delete_confirm").value = "true";
+        }
+    </script>
+
+    #{/form}
+</body>
+</html>

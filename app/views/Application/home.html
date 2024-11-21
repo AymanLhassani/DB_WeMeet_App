@@ -1,24 +1,128 @@
 <html lang="en">
-  <head>
-    <title>WeMEET - Home</title>
-  </head>
+    <head>
+        <title>WeMEET - Home</title>
+        <style>
 
-  <body>
-   <h1>HOME</h1>
+            .div_menu_bar {
+                margin:auto;
+                padding:10px;
 
-    #{form @Home(), id:'formRegister'}
-    <p>
-      <label id="lab1">Welcome ${ConnectedUser}</label>
-    </p>
+                border-style:solid;
+                background-color:#1A1A19;
+                width:98%;
+            }
 
-    <script>
-      function x() {
+            body{
+                background-color:#8FD14F;
+            }
+            h1 {
+                display:inline;
 
-      }
-    </script>
+                color:#31711E;
+                font-size:60px;
+                font-family: Impact;
+                margin-left: 10%;
+            }
+            .label{
 
-    #{/form}
-  </body>
+            }
+            .labelname {
+                color: #FFE6A9;
+                margin-left: 55%;
+                text-align: center;
+                font-size: 22px;
+                font-weight: bold;
+                font-family: Perpetua;
+            }
+            .button{
+                background-color:#F6FCDF;
+                text-align:center;
+
+                transition-duration: 0.4s;
+                cursor: pointer;
+            }
+            .button_profile {
+                font-size:25px;
+                font-family: Impact;
+                color:#2A2A19;
+                background-color:#F6FCDF;
+                border-radius: 5px;
+                padding: 10px;
+                margin-left: 40px;
+            }
+            .button_profile:hover {
+                background-color:#34A028;
+            }
+
+            .div_inputs_search {
+                margin-top:25%;
+                margin-bottom:30px;
+                margin-left:5%;
+                margin-right:5%;
+
+                border-style:solid;
+                border-radius:15px;
+
+                padding:15px;
+
+                background-color:#FFE6A9;
+                text-align:center;
+
+                font-size:25px;
+                font-family: Perpetua;
+            }
+            .input{
+                font-size:25px;
+                font-family: Perpetua;
+                transition-duration: 0.4s;
+                cursor: text;
+            }
+            .inputparams{
+                border-style:none;
+                border-radius:5px;
+                background-color:#FFCF8D;
+            }
+            .inputparams:hover{
+                background-color:#DEAA79;
+            }
+            .labelspace{
+                font-size:35px;
+                margin-left:5%;
+                margin-right:5%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="div_menu_bar">
+            <h1>WeMEET</h1>
+            <label class="label labelname">${ConnectedUser.Name} </label>
+            <a class="button_profile" href="@{Profile()}">PROFILE</a>
+        </div>
+
+
+        #{form @Home(), id:'formHome'}
+        <div class="div_inputs_search">
+            <label>Location:</label>
+            <input class="input inputparams" type="text" name="x"/>
+            <label class="label labelspace">|</label>
+            <label>Date:</label>
+            <input class="input inputparams" type="text" name="x"/>
+            <label class="label labelspace">|</label>
+            <label>People:</label>
+            <input class="input inputparams" type="text" name="x"/>
+        </div>
+
+
+
+        <script>
+            function x() {
+
+            }
+        </script>
+
+        #{/form}
+    </body>
 </html>
 
 <!-- <button onclick="window.location.href='destination.html'">Click Me!</button> -->

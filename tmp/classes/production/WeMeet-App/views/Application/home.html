@@ -1,0 +1,31 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+-->
+
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<h1>Register</h1>
+
+#{form @Home(), id:'formRegister'}
+<p class="field" id="1">
+  <label>Login Name:</label>
+  <input type="text" name="n" size="19" value="${flash.username}" />
+</p>
+<p class="field" id="2">
+  <label>Password:</label>
+  <input type="password" name="p" size="19"/>
+</p>
+<p class="buttons" id="3">
+  <input type="submit" value="Submit" />
+</p>
+#{/form}
