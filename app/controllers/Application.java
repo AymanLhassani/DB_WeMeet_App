@@ -5,7 +5,9 @@ import play.mvc.*;
 
 import models.*;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Application extends Controller
 {
@@ -46,7 +48,7 @@ public class Application extends Controller
         {
             USER user = new USER(n, p, 0, 0).save();
             User_Service = user;
-            Home();
+            Home(false,"", "", "");
         }
         else if (u != null)  //user already exists
         {
@@ -78,21 +80,42 @@ public class Application extends Controller
         else
         {
             User_Service = u;
-            Home();
+            Home(false,"", "", "");
         }
     }
 
-    public static void Home()
+    public static void Home(boolean do_spaces, String location, String date, String people)
     {
-        renderArgs.put("ConnectedUser", User_Service);
-        renderTemplate("Application/home.html");    //equivalent to HomeHTML
+        if(do_spaces)
+        {
+            Spaces(location, date, people);
+        }
+        else
+        {
+            renderArgs.put("ConnectedUser", User_Service);
+            renderTemplate("Application/home.html");    //equivalent to HomeHTML
+        }
+
     }
 
 
-    public static void listSpaces(){
-        List<SPACEMEETING> spaces = SPACEMEETING.findAll();
-        render("Application/listspaces.html", spaces);
-
+    public static void Spaces(String location_search, String date_search, String people_search)
+    {
+        List<SPACEMEETING> all_spaces = SPACEMEETING.find("byLocationAndDate", location_search, date_search).fetch();
+        List<SPACEMEETING> spaces = new ArrayList<>();
+        for(SPACEMEETING sp : all_spaces)
+        {
+            if(sp.numberPeople <= Integer.parseInt(people_search))
+            {
+                spaces.add(sp);
+            }
+        }
+        renderArgs.put("list_of_spaces", spaces);       //contains only the specified spaces
+        renderArgs.put("ConnectedUser", User_Service);
+        renderArgs.put("location", location_search);
+        renderArgs.put("date", date_search);
+        renderArgs.put("people", people_search);
+        renderTemplate("Application/spaces.html");
     }
 
     public static void Profile(boolean do_delete, boolean do_update, String new_password)
@@ -105,10 +128,17 @@ public class Application extends Controller
         }
         else if(do_update)
         {
-            USER u = USER.find("byNameAndPassword", User_Service.Name, User_Service.Password).first();
-            u.Password = new_password;
-            u.save();
-            renderTemplate("Application/init.html");    //equivalent to ProfileHTML
+            if (!Objects.equals(new_password, null))
+            {
+                USER u = USER.find("byNameAndPassword", User_Service.Name, User_Service.Password).first();
+                u.Password = new_password;
+                u.save();
+                renderTemplate("Application/init.html");    //equivalent to ProfileHTML
+            }
+        }
+        else if ((Objects.equals(new_password, "/wrong/")))
+        {
+
         }
         else
         {

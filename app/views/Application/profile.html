@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>WeMEET - Profile</title>
     <style>
 
@@ -26,17 +28,19 @@
         }
 
         .button_to_home {
-            background-color:#F2FCDF;
+            background-color:#F6FCDF;
             text-align:center;
 
             transition-duration: 0.4s;
             cursor: pointer;
-            font-size:22px;
+            font-size:25px;
             font-family: Impact;
             color:#2A2A19;
             border-radius: 5px;
             padding: 10px;
-            margin-left: 50px;
+            position: fixed;
+            margin-top: 11.5px;
+            right: 10%;
         }
         .button_to_home:hover {
             background-color:#34A028;
@@ -92,14 +96,20 @@
             background-color:#34A028;
         }
 
-        .question_delete {
+        .question {
             font-size:20px;
             font-family: Impact;
         }
 
-        .question_password {
+
+        .input_password{
             font-size:20px;
-            font-family: Impact;
+            font-family: Perpetua;
+            background-color:#8FD14F;
+            border-style:none;
+            border-bottom-style: solid;
+            text-align: center;
+            outline: none;
         }
 
         /* Set a style for the submit/login button */
@@ -132,7 +142,7 @@
           display: none;
 
           position: fixed;
-          bottom: 50%;
+          bottom: 40%;
           right: 15%;
           left: 55%;
           padding: 15px;
@@ -217,7 +227,7 @@
 <body>
     <div class="div_menu_bar">
         <h1>${ConnectedUser.Name}</h1>
-
+        <a class="button_to_home" href="@{Home()}">HOME</a>
     </div>
 
 
@@ -237,14 +247,16 @@
 
     <div class="form-popup_PASSWORD" id="myFormPassword">
         <form action="/action_page.php" class="form-container_PASSWORD">
-            <label class="question_delete">Write your new password, please:</label>
-            <input type="text" id="password" name="do_delete"/>
+            <label class="question">Write your new password, please:</label> <br>
+            <input class="input_password" type="password" id="password"/> <br>
 
-            <label class="question_delete">Confirm your new password:</label>
-            <input type="text" id="password_check" name="do_delete"/>
+            <label class="question">Confirm your new password:</label> <br>
+            <input class="input_password" type="password" id="password_check"/> <br>
+            <label class="question" id="check_password" style="color: red; display:none;">Check your new password matches the confirmation</label> <br>
 
             <button type="submit" class="btn" onclick="updateUser()">CONFIRM</button>
             <button type="button" class="btn cancel" onclick="closeFormPassword()">CANCEL</button>
+
             <input style="display:none;" type="text" id="password_confirm" name="do_update"/>
             <input style="display:none;" type="text" id="password_value" name="new_password"/>
         </form>
@@ -252,10 +264,11 @@
 
     <div class="form-popup_DELETE" id="myFormDelete">
         <form action="/action_page.php" class="form-container_DELETE">
-            <label class="question_delete">Are you sure you want to delete your account?</label>
+            <label class="question">Are you sure you want to delete your account?</label>
 
             <button type="submit" class="btn" onclick="deleteUser()">DELETE</button>
             <button type="button" class="btn cancel" onclick="closeFormDelete()">CANCEL</button>
+
             <input style="display:none;" type="text" id="delete_confirm" name="do_delete"/>
         </form>
     </div>
@@ -283,10 +296,16 @@
             var p = document.getElementById("password").value;
             var pc = document.getElementById("password_check").value;
 
-            if(p == pc)
+            if((p == pc) && (p == "") && (pc == ""))
             {
                 document.getElementById("password_confirm").value = "true";
                 document.getElementById("password_value").value = p;
+            }
+            else
+            {
+                document.getElementById("check_password").style.display = "block";
+                document.getElementById("password_confirm").value = "false";
+                document.getElementById("password_value").value = "/wrong/";
             }
         }
 

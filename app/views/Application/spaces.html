@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>WeMEET - Spaces</title>
+
+        <style>
+            .div_menu_bar {
+                margin:auto;
+                padding:10px;
+
+                border-style:solid;
+                background-color:#1A1A19;
+                width:98%;
+            }
+            body{
+                background-color:#8FD14F;
+            }
+            h1 {
+                display:inline;
+                text-transform: capitalize;
+                color:#31711E;
+                font-size:60px;
+                font-family: Impact;
+                margin-left: 10%;
+                text-transform: capitalize;
+            }
+
+            .button_to_home {
+                background-color:#F6FCDF;
+                text-align:center;
+
+                transition-duration: 0.4s;
+                cursor: pointer;
+                font-size:25px;
+                font-family: Impact;
+                color:#2A2A19;
+                border-radius: 5px;
+                padding: 10px;
+                position: fixed;
+                margin-top: 11.5px;
+                right: 10%;
+            }
+            .button_to_home:hover {
+                background-color:#34A028;
+            }
+
+            .div_space_cover{
+                border-style: solid;
+                border-radius: 10px;
+                background-color: #FFE6A9;
+
+                position: fixed;
+                left: 50%;
+                right: 20%;
+                padding: 0px;
+                margin-top: 10%;
+                height: 125px;
+            }
+
+            .div_border{
+                border-style: solid;
+                background-color: #8FD14F;
+
+                position: absolute;
+                left: 120px;
+                height: 120px;
+                width: 0px;
+            }
+
+            .picture_space{
+                position: absolute;
+                left: 0px;
+            }
+
+            .label_typo1{
+                font-size:25px;
+                font-family: Perpetua;
+            }
+
+            .label_location_space{
+                position: absolute;
+                left: 150px;
+                top: 25px;
+            }
+
+            .label_date_space{
+                position: absolute;
+                left: 150px;
+                top: 75px;
+            }
+
+            .label_people_space{
+                position: absolute;
+                left: 325px;
+                top: 75px;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="div_menu_bar">
+            <h1>Spaces</h1>
+
+            <a class="button_to_home" href="@{Home()}">HOME</a>
+        </div>
+
+        <div class="div_space_cover">
+            <div   class="div_border"></div>
+            <img   class="picture_space" src="">
+            <label class="label_typo1 label_location_space">${location}</label>
+            <label class="label_typo1 label_date_space">${date}</label>
+            <label class="label_typo1 label_people_space">${people} PEOPLE</label>
+        </div>
+
+    </body>
+</html>

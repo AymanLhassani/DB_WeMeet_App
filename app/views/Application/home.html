@@ -1,5 +1,7 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
         <title>WeMEET - Home</title>
         <style>
 
@@ -20,24 +22,23 @@
 
                 color:#31711E;
                 font-size:60px;
-                font-family: Impact;
+                font-family: Eras ITC;
                 margin-left: 10%;
             }
             .label{
 
             }
-            .labelname {
+            .label_name {
                 color: #FFE6A9;
-                margin-left: 55%;
                 text-align: center;
-                font-size: 22px;
+                font-size: 30px;
                 font-weight: bold;
                 font-family: Perpetua;
+                position: fixed;
+                margin-top: 22.5px;
+                right: 20%;
             }
             .button{
-                background-color:#F6FCDF;
-                text-align:center;
-
                 transition-duration: 0.4s;
                 cursor: pointer;
             }
@@ -45,10 +46,12 @@
                 font-size:25px;
                 font-family: Impact;
                 color:#2A2A19;
-                background-color:#F6FCDF;
+                background-color: white;
                 border-radius: 5px;
                 padding: 10px;
-                margin-left: 40px;
+                position: fixed;
+                margin-top: 11.5px;
+                right: 10%;
             }
             .button_profile:hover {
                 background-color:#34A028;
@@ -77,18 +80,35 @@
                 transition-duration: 0.4s;
                 cursor: text;
             }
-            .inputparams{
+            .input_params{
                 border-style:none;
                 border-radius:5px;
                 background-color:#FFCF8D;
             }
-            .inputparams:hover{
+            .input_params:hover{
                 background-color:#DEAA79;
             }
-            .labelspace{
+            .label_space{
                 font-size:35px;
                 margin-left:5%;
                 margin-right:5%;
+            }
+
+            .button_search {
+                text-align:center;
+                font-size:30px;
+                font-family: Impact;
+                color: white;
+                background-color:#1A1A19;
+                border-radius: 5px;
+                padding: 10px;
+                position:fixed;
+                left: 45%;
+                right: 45%;
+
+            }
+            .button_search:hover {
+                background-color:#34A028;
             }
         </style>
     </head>
@@ -96,29 +116,38 @@
     <body>
         <div class="div_menu_bar">
             <h1>WeMEET</h1>
-            <label class="label labelname">${ConnectedUser.Name} </label>
-            <a class="button_profile" href="@{Profile()}">PROFILE</a>
+            <label class="label label_name">${ConnectedUser.Name} </label>
+            <a class="button button_profile" href="@{Profile()}">PROFILE</a>
         </div>
 
 
         #{form @Home(), id:'formHome'}
         <div class="div_inputs_search">
             <label>Location:</label>
-            <input class="input inputparams" type="text" name="x"/>
-            <label class="label labelspace">|</label>
+            <input id="loc" class="input input_params" type="text" name="location" value=""/>
+            <label class="label label_space">|</label>
             <label>Date:</label>
-            <input class="input inputparams" type="text" name="x"/>
-            <label class="label labelspace">|</label>
+            <input id="dat" class="input input_params" type="date" name="date" value=""/>
+            <label class="label label_space">|</label>
             <label>People:</label>
-            <input class="input inputparams" type="text" name="x"/>
+            <input id="ppl" class="input input_params" type="text" name="people" value=""/>
         </div>
+        <br>
+        <button type="submit" id="search" class="button button_search" onclick="GoToSpaces()">SEARCH</button>
 
-
+        <input style="display:none;" type="text" id="going_spaces" name="do_spaces"/>
 
         <script>
-            function x() {
-
+            function GoToSpaces() {
+                var loc = document.getElementById("loc").value;
+                var dat = document.getElementById("dat").value;
+                var ppl = document.getElementById("ppl").value;
+                if ((loc != "") && (dat != "") && (ppl != ""))
+                {
+                    document.getElementById("going_spaces").value = "true";
+                }
             }
+
         </script>
 
         #{/form}

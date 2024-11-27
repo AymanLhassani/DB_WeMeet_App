@@ -9,8 +9,9 @@ import java.util.List;
 @Entity
 public class SPACEMEETING extends Model {
     public int numberPeople;
-    public String scheduleAvailable;
     public String location;
+    public String date;
+    public String scheduleAvailable;
     public Boolean ventilation;
 
     @OneToMany (mappedBy = "Space_Reserve")
@@ -21,10 +22,11 @@ public class SPACEMEETING extends Model {
 
     public SPACEMEETING(){}
 
-    public SPACEMEETING(int numberPeople, String scheduleAvailable, String location, Boolean ventilation) {
+    public SPACEMEETING(int numberPeople, String date, String location, String scheduleAvailable, Boolean ventilation) {
         this.numberPeople = numberPeople;
-        this.scheduleAvailable = scheduleAvailable;
+        this.date = date;
         this.location = location;
+        this.scheduleAvailable = scheduleAvailable;
         this.ventilation = ventilation;
     }
 }
