@@ -1,5 +1,6 @@
 package controllers;
 
+import com.mchange.v1.identicator.IdList;
 import org.h2.engine.User;
 import play.mvc.*;
 
@@ -101,11 +102,21 @@ public class Application extends Controller
 
     public static void Spaces(String location_search, String date_search, String people_search)
     {
-        List<SPACEMEETING> all_spaces = SPACEMEETING.find("byLocationAndDate", location_search, date_search).fetch();
+        String[] data_div = new String[3];
+
+        data_div = date_search.split("-");
+
+        String date_year = data_div[0];
+        String date_month = data_div[1];
+        String date_day = data_div[2];
+
+        String date_mod = date_day + "/" + date_month + "/" + date_year;
+
+        List<SPACEMEETING> all_spaces = SPACEMEETING.find("byLocationAndDate", location_search, date_mod).fetch();
         List<SPACEMEETING> spaces = new ArrayList<>();
         for(SPACEMEETING sp : all_spaces)
         {
-            if(sp.numberPeople <= Integer.parseInt(people_search))
+            if(sp.numberPeople >= Integer.parseInt(people_search))
             {
                 spaces.add(sp);
             }
@@ -113,7 +124,7 @@ public class Application extends Controller
         renderArgs.put("list_of_spaces", spaces);       //contains only the specified spaces
         renderArgs.put("ConnectedUser", User_Service);
         renderArgs.put("location", location_search);
-        renderArgs.put("date", date_search);
+        renderArgs.put("date", date_mod);
         renderArgs.put("people", people_search);
         renderTemplate("Application/spaces.html");
     }

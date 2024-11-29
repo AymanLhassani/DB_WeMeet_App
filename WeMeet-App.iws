@@ -4,22 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b91cc7c5-d5b1-49ba-ad96-73e8ee6504c1" name="Changes" comment="Merge remote-tracking branch 'origin/Enric' into Enric&#10;&#10;# Conflicts:&#10;#&#9;WeMeet-App.iws&#10;#&#9;app/controllers/Application.java&#10;#&#9;app/views/Application/home.html&#10;#&#9;app/views/Application/init.html&#10;#&#9;app/views/Application/login.html&#10;#&#9;app/views/Application/profile.html&#10;#&#9;tmp/bytecode/DEV/controllers.Application&#10;#&#9;tmp/classes/controllers/Application.class">
-      <change afterPath="$PROJECT_DIR$/app/views/Application/spaces.html" afterDir="false" />
+    <list default="true" id="b91cc7c5-d5b1-49ba-ad96-73e8ee6504c1" name="Changes" comment="Update general">
+      <change beforePath="$PROJECT_DIR$/WeMeet-App.iml" beforeDir="false" afterPath="$PROJECT_DIR$/WeMeet-App.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeMeet-App.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeMeet-App.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bootstrap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/SPACEMEETING.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/SPACEMEETING.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/Application/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/init.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/init.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/Application/spaces.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/spaces.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/Bootstrap" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/Bootstrap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_init.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_init.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.SpaceMeeting" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.SpaceMeeting" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
@@ -85,22 +79,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Enric&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/Documents/UNI/EETAC/3r/Q1/PES/IntelliJ/play-1.5.3/WeMeet-App&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.HTML&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Enric",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/HP/Documents/UNI/EETAC/3r/Q1/PES/IntelliJ/play-1.5.3/WeMeet-App",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -183,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732466445505</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Update general">
+      <option name="closed" value="true" />
+      <created>1732667960583</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732667960583</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +229,7 @@
     <MESSAGE value="Update Home" />
     <MESSAGE value="Update PROFILE (to perfect)" />
     <MESSAGE value="Merge remote-tracking branch 'origin/Enric' into Enric&#10;&#10;# Conflicts:&#10;#&#9;WeMeet-App.iws&#10;#&#9;app/controllers/Application.java&#10;#&#9;app/views/Application/home.html&#10;#&#9;app/views/Application/init.html&#10;#&#9;app/views/Application/login.html&#10;#&#9;app/views/Application/profile.html&#10;#&#9;tmp/bytecode/DEV/controllers.Application&#10;#&#9;tmp/classes/controllers/Application.class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/Enric' into Enric&#10;&#10;# Conflicts:&#10;#&#9;WeMeet-App.iws&#10;#&#9;app/controllers/Application.java&#10;#&#9;app/views/Application/home.html&#10;#&#9;app/views/Application/init.html&#10;#&#9;app/views/Application/login.html&#10;#&#9;app/views/Application/profile.html&#10;#&#9;tmp/bytecode/DEV/controllers.Application&#10;#&#9;tmp/classes/controllers/Application.class" />
+    <MESSAGE value="Update general" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update general" />
   </component>
 </project>

@@ -8,11 +8,13 @@ import java.util.List;
 
 @Entity
 public class SPACEMEETING extends Model {
+
     public int numberPeople;
     public String location;
     public String date;
     public String scheduleAvailable;
-    public Boolean ventilation;
+    public Boolean tv;
+    public String imagepath;
 
     @OneToMany (mappedBy = "Space_Reserve")
     public  List<MEETING> Listmeetings = new ArrayList<>();
@@ -22,11 +24,13 @@ public class SPACEMEETING extends Model {
 
     public SPACEMEETING(){}
 
-    public SPACEMEETING(int numberPeople, String date, String location, String scheduleAvailable, Boolean ventilation) {
+    public SPACEMEETING(int numberPeople, String date, String location, String scheduleAvailable, Boolean tv, String imagepath) {
+
         this.numberPeople = numberPeople;
         this.date = date;
         this.location = location;
         this.scheduleAvailable = scheduleAvailable;
-        this.ventilation = ventilation;
+        this.tv = tv;
+        this.imagepath = imagepath;
     }
 }

@@ -25,13 +25,12 @@
                 margin-left: 10%;
                 text-transform: capitalize;
             }
-
             .button_to_home {
                 background-color:#F6FCDF;
                 text-align:center;
 
                 transition-duration: 0.4s;
-                cursor: pointer;
+
                 font-size:25px;
                 font-family: Impact;
                 color:#2A2A19;
@@ -43,77 +42,303 @@
             }
             .button_to_home:hover {
                 background-color:#34A028;
+                cursor: pointer;
             }
 
+            /*Container que permet fer scroll*/
+            .div_container{
+                overflow: auto;
+                position:fixed;
+                left: 50%;
+                right: 0.7%;
+                top: 15%;
+                bottom: 1%;
+
+                border-style: solid;
+            }
+
+            /*Anunci de cada un dels spaces*/
             .div_space_cover{
                 border-style: solid;
-                border-radius: 10px;
                 background-color: #FFE6A9;
 
-                position: fixed;
-                left: 50%;
-                right: 20%;
+                position: relative;
+                left: 10%;
+                right: 30%;
                 padding: 0px;
-                margin-top: 10%;
+                margin-top:15%;
                 height: 125px;
             }
-
+            .div_space_cover:hover {
+                cursor: pointer;
+            }
             .div_border{
                 border-style: solid;
                 background-color: #8FD14F;
 
                 position: absolute;
                 left: 120px;
-                height: 120px;
+                height: 121px;
                 width: 0px;
             }
-
-            .picture_space{
+            .div_picture{
                 position: absolute;
-                left: 0px;
+                width:120px;
+                height: 125px;
             }
-
-            .label_typo1{
-                font-size:25px;
-                font-family: Perpetua;
-            }
-
             .label_location_space{
                 position: absolute;
                 left: 150px;
                 top: 25px;
             }
-
             .label_date_space{
                 position: absolute;
                 left: 150px;
                 top: 75px;
             }
-
             .label_people_space{
                 position: absolute;
                 left: 325px;
                 top: 75px;
             }
 
+            /*Barra dels resultats de la busqueda*/
+            .div_inputs_search {
+                position:fixed;
+                margin-top:2%;
+                left:55%;
+                right:10%;
+                z-index: 2;
+
+                border-style:solid;
+                border-radius:15px;
+
+                padding:15px;
+
+                background-color:#FFE6A9;
+                text-align:center;
+
+                font-size:25px;
+                font-family: Perpetua;
+            }
+            .input{
+                font-size:25px;
+                font-family: Perpetua;
+                transition-duration: 0.4s;
+                cursor: text;
+            }
+            .input_params{
+                border-style:none;
+                border-radius:5px;
+                background-color:#FFCF8D;
+            }
+            .input_params:hover{
+                background-color:#DEAA79;
+            }
+            .label_space{
+                font-size:35px;
+                margin-left:5%;
+                margin-right:5%;
+            }
+
+            /*Millor display del scroll. Fa que desapareixi al passar per sota la barra de busqueda*/
+            .div_top_scroll_invisible{
+                position:fixed;
+                background-color: #8FD14F;
+                left: 55%;
+                right: 10%;
+                top: 15.4%;
+                bottom: 75%;
+                z-index: 2;
+            }
+
+            /*Dsseny taula que conte els anuncis dels spaces*/
+            .table_containers{
+                border: 3px solid black;
+                width: 58%;
+
+                position: absolute;
+                left: 15%;
+                right: 25%;
+                padding: 0px;
+                margin-top:15%;
+                height: 125px;
+            }
+
+            /* SCROLLBAR */
+            /* width */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #888;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+
+            /*Quan es clica un anunci, mostrem la info*/
+            .div_space_clicked{
+                position:fixed;
+                right: 67%;
+                left: 2.7%;
+                top: 20%;
+                bottom: 35%;
+
+                background-color: #1A1A19;
+
+                border-style: solid;
+            }
+            .div_space_clicked_picture{
+                position: absolute;
+                background-color: red;
+                width: 100%;
+                height: 70%;
+            }
+            .div_space_clicked_location{
+                position: absolute;
+                color: white;
+
+                left: 5%;
+                top: 73%;
+            }
+            .div_space_clicked_date{
+                position: absolute;
+                color: white;
+
+                left: 5%;
+                top: 83%;
+            }
+            .div_space_clicked_people{
+                position: absolute;
+                color: white;
+
+                left: 5%;
+                top: 93%;
+            }
+
+             /* Decoration */
+            .div_deco{
+                position:fixed;
+                right: 65%;
+                left: 0.7%;
+                top: 15%;
+                bottom: 1%;
+
+                border-style: solid;
+            }
+            .label_typo1{
+                font-size:20px;
+                font-family: Impact;
+            }
+
+            .label_typo2{
+                font-size:15px;
+                font-family: Impact;
+            }
+
+
 
         </style>
     </head>
 
-    <body>
+    <body >
         <div class="div_menu_bar">
             <h1>Spaces</h1>
 
             <a class="button_to_home" href="@{Home()}">HOME</a>
         </div>
 
-        <div class="div_space_cover">
-            <div   class="div_border"></div>
-            <img   class="picture_space" src="">
-            <label class="label_typo1 label_location_space">${location}</label>
-            <label class="label_typo1 label_date_space">${date}</label>
-            <label class="label_typo1 label_people_space">${people} PEOPLE</label>
+        <div class="div_deco">
+            <img src="@{'public/images/Shield_Water.jpg'}" alt="Icon" style="width:100%;height:100%;">
         </div>
 
+        <div class="div_space_clicked" id="show_space" style="display:none;">
+            <div   id="pic_clicked_show" class="div_space_clicked_picture"
+                   style="background-size: contain; background-repeat: no-repeat; background-position: center;">
+            </div>
+            <label id="loc_clicked_show" class="label_typo2 div_space_clicked_location">a</label>
+            <label id="dat_clicked_show" class="label_typo2 div_space_clicked_date">a</label>
+            <label id="ppl_clicked_show" class="label_typo2 div_space_clicked_people">a</label>
+        </div>
+
+        <div class="div_container">
+            <div class="div_scroll">
+                <div class="div_top_scroll_invisible">
+                    <div class="div_inputs_search">
+                        <label class="label_typo1" style="margin-right:10%;">${location}</label>
+                        <label class="label_typo1">${date}</label>
+                        <label class="label_typo1" style="margin-left:10%;">${people} PEOPLE</label>
+                    </div>
+                </div>
+
+                #{form @Spaces(), id:'formSpaces'}
+                    #{if list_of_spaces}
+                        <table class="table_containers">
+                            <tr>
+                                <th></th>
+                            </tr>
+
+                            #{list items:list_of_spaces, as:'space'}
+                                <tr style="border: 1px solid black  ;">
+                                    <td >
+                                        <div id="${space.id}" class="div_space_cover" onclick="ShowSpace(this.id)">
+                                            <div    class="div_border"></div>
+                                            <div    id="${space.id} pic" class="div_picture" about="url(${space.imagepath});"
+                                                    style="background: url(${space.imagepath}); background-size: cover;
+                                                    background-repeat: no-repeat; background-position: center; ">
+                                            </div>
+                                            <label  id="${space.id} loc" class="label_typo1 label_location_space">${space.location}</label>
+                                            <label  id="${space.id} dat" class="label_typo1 label_date_space">${space.date}</label>
+                                            <label  id="${space.id} ppl" class="label_typo1 label_people_space">${space.numberPeople} PEOPLE</label>
+                                        </div>
+                                    </td>
+                                </tr>
+                            #{/list}
+                        </table>
+
+
+                    #{/if}
+                #{/form}
+
+                <script>
+
+                    function ShowSpace(clicked_id){
+                        var clicked = document.getElementById("show_space");
+                        if(clicked.style.display == "none")
+                        {
+                            document.getElementById("show_space").style.display = "inline";
+
+                            var clicked_pic = document.getElementById(clicked_id + " pic").style.background;
+                            var clicked_loc = document.getElementById(clicked_id + " loc").innerHTML;
+                            var clicked_dat = document.getElementById(clicked_id + " dat").innerHTML;
+                            var clicked_ppl = document.getElementById(clicked_id + " ppl").innerHTML;
+                            document.getElementById("pic_clicked_show").style.background = clicked_pic;
+                            document.getElementById("loc_clicked_show").innerHTML = clicked_loc;
+                            document.getElementById("dat_clicked_show").innerHTML = clicked_dat;
+                            document.getElementById("ppl_clicked_show").innerHTML = clicked_ppl;
+                        }
+                        else
+                        {
+                            document.getElementById("show_space").style.display = "none";
+                        }
+                    }
+                </script>
+
+                <!--
+                    scrollbar   https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp
+                    event click id  https://stackoverflow.com/questions/4825295/onclick-to-get-the-id-of-the-clicked-button
+                -->
+            </div>
+        </div>
     </body>
 </html>
