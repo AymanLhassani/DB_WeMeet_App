@@ -9,10 +9,13 @@ import java.util.List;
 @Entity
 public class SPACEMEETING extends Model {
 
+    public int iden;
     public int numberPeople;
     public String location;
     public String date;
-    public String scheduleAvailable;
+    public int schedule_start;
+    public int schedule_end;
+    public String schedule;
     public Boolean tv;
     public String imagepath;
 
@@ -24,13 +27,17 @@ public class SPACEMEETING extends Model {
 
     public SPACEMEETING(){}
 
-    public SPACEMEETING(int numberPeople, String date, String location, String scheduleAvailable, Boolean tv, String imagepath) {
+    public SPACEMEETING(int iden, int numberPeople, String date, String location, int schedule_start, int schedule_end, String schedule, Boolean tv, String imagepath, USER user_Renter) {
 
+        this.iden = iden;
         this.numberPeople = numberPeople;
         this.date = date;
         this.location = location;
-        this.scheduleAvailable = scheduleAvailable;
+        this.schedule_start = schedule_start;
+        this.schedule_end = schedule_end;
+        this.schedule = schedule;
         this.tv = tv;
         this.imagepath = imagepath;
+        this.User_Renter = user_Renter;
     }
 }

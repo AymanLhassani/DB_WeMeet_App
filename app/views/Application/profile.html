@@ -246,7 +246,7 @@
     </div>
 
     <div class="form-popup_PASSWORD" id="myFormPassword">
-        <form action="/action_page.php" class="form-container_PASSWORD">
+        <form class="form-container_PASSWORD">
             <label class="question">Write your new password, please:</label> <br>
             <input class="input_password" type="password" id="password"/> <br>
 
@@ -254,7 +254,7 @@
             <input class="input_password" type="password" id="password_check"/> <br>
             <label class="question" id="check_password" style="color: red; display:none;">Check your new password matches the confirmation</label> <br>
 
-            <button type="submit" class="btn" onclick="updateUser()">CONFIRM</button>
+            <button type="submit" class="btn" onclick="updateUser(event)">CONFIRM</button>
             <button type="button" class="btn cancel" onclick="closeFormPassword()">CANCEL</button>
 
             <input style="display:none;" type="text" id="password_confirm" name="do_update"/>
@@ -263,7 +263,7 @@
     </div>
 
     <div class="form-popup_DELETE" id="myFormDelete">
-        <form action="/action_page.php" class="form-container_DELETE">
+        <form class="form-container_DELETE">
             <label class="question">Are you sure you want to delete your account?</label>
 
             <button type="submit" class="btn" onclick="deleteUser()">DELETE</button>
@@ -292,11 +292,11 @@
             document.getElementById("myFormDelete").style.display = "none";
         }
 
-        function updateUser() {
+        function updateUser(event) {
             var p = document.getElementById("password").value;
             var pc = document.getElementById("password_check").value;
 
-            if((p == pc) && (p == "") && (pc == ""))
+            if((p == pc) && (p != "") && (pc != ""))
             {
                 document.getElementById("password_confirm").value = "true";
                 document.getElementById("password_value").value = p;
@@ -304,8 +304,7 @@
             else
             {
                 document.getElementById("check_password").style.display = "block";
-                document.getElementById("password_confirm").value = "false";
-                document.getElementById("password_value").value = "/wrong/";
+                event.preventDefault();
             }
         }
 

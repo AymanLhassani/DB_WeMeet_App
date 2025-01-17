@@ -89,7 +89,7 @@ public class Application extends Controller
     {
         if(do_spaces)
         {
-            Spaces(location, date, people);
+            Spaces(location, date, people, false, 0, null, null, 0);
         }
         else
         {
@@ -100,33 +100,51 @@ public class Application extends Controller
     }
 
 
-    public static void Spaces(String location_search, String date_search, String people_search)
+    public static void Spaces(String location_search, String date_search, String people_search, boolean do_reserve, int id,
+                              String new_schedule, String schedule_meeting, int number_people)
     {
-        String[] data_div = new String[3];
-
-        data_div = date_search.split("-");
-
-        String date_year = data_div[0];
-        String date_month = data_div[1];
-        String date_day = data_div[2];
-
-        String date_mod = date_day + "/" + date_month + "/" + date_year;
-
-        List<SPACEMEETING> all_spaces = SPACEMEETING.find("byLocationAndDate", location_search, date_mod).fetch();
-        List<SPACEMEETING> spaces = new ArrayList<>();
-        for(SPACEMEETING sp : all_spaces)
+        if(do_reserve)
         {
-            if(sp.numberPeople >= Integer.parseInt(people_search))
-            {
-                spaces.add(sp);
-            }
+            //update schedule space_meeting
+            List<SPACEMEETING> all_spaces = SPACEMEETING.findAll();
+            SPACEMEETING update_space = all_spaces.get(id - 1);
+            update_space.schedule = new_schedule;
+            update_space.save();
+
+            MEETING new_meeting = new MEETING(number_people, schedule_meeting, update_space, User_Service);
+            new_meeting.save();
+
+            Home(false,"", "", "");
         }
-        renderArgs.put("list_of_spaces", spaces);       //contains only the specified spaces
-        renderArgs.put("ConnectedUser", User_Service);
-        renderArgs.put("location", location_search);
-        renderArgs.put("date", date_mod);
-        renderArgs.put("people", people_search);
-        renderTemplate("Application/spaces.html");
+        else    //default
+        {
+            String[] data_div = new String[3];
+
+            data_div = date_search.split("-");
+
+            String date_year = data_div[0];
+            String date_month = data_div[1];
+            String date_day = data_div[2];
+
+            String date_mod = date_day + "/" + date_month + "/" + date_year;
+
+            List<SPACEMEETING> all_spaces = SPACEMEETING.find("byLocationAndDate", location_search, date_mod).fetch();
+            List<SPACEMEETING> spaces = new ArrayList<>();
+            for(SPACEMEETING sp : all_spaces)
+            {
+                if(sp.numberPeople >= Integer.parseInt(people_search))
+                {
+                    spaces.add(sp);
+                }
+            }
+            renderArgs.put("list_of_spaces", spaces);       //contains only the specified spaces
+            renderArgs.put("ConnectedUser", User_Service);
+            renderArgs.put("location", location_search);
+            renderArgs.put("date", date_mod);
+            renderArgs.put("people", people_search);
+            renderTemplate("Application/spaces.html");
+        }
+
     }
 
     public static void Profile(boolean do_delete, boolean do_update, String new_password)

@@ -204,26 +204,9 @@
                 width: 100%;
                 height: 70%;
             }
-            .div_space_clicked_location{
+            .div_space_clicked_label{
                 position: absolute;
                 color: white;
-
-                left: 5%;
-                top: 73%;
-            }
-            .div_space_clicked_date{
-                position: absolute;
-                color: white;
-
-                left: 5%;
-                top: 83%;
-            }
-            .div_space_clicked_people{
-                position: absolute;
-                color: white;
-
-                left: 5%;
-                top: 93%;
             }
 
              /* Decoration */
@@ -246,6 +229,63 @@
                 font-family: Impact;
             }
 
+            .button_schedule{
+                background-color:#B1F0F7;
+                text-align:center;
+
+                transition-duration: 0.4s;
+
+                font-size:35px;
+                color: #1A1A19;
+                font-family: Impact;
+                border-radius: 5px;
+                width: 40px;
+
+            }
+            .button_schedule:hover {
+                background-color:#34A028;
+                cursor: pointer;
+            }
+
+            .div_space_clicked_schedule{
+                position:fixed;
+                right: 72%;
+                left: 7.7%;
+                top: 70%;
+                bottom: 15%;
+
+                background-color: #1A1A19;
+                border-style: solid;
+            }
+
+            .input_hours{
+                position: absolute;
+
+                font-size:15px;
+                font-family: Perpetua;
+                transition-duration: 0.4s;
+                cursor: text;
+                width: 15px;
+                height: 15px;
+            }
+
+            .button_RESERVE{
+                background-color:#34A028;
+                text-align:center;
+
+                transition-duration: 0.4s;
+
+                font-size:25px;
+                color: #1A1A19;
+                font-family: Impact;
+                border-radius: 5px;
+                width: 80px;
+
+            }
+            .button_RESERVE:hover {
+                background-color:#B1F0F7;
+                cursor: pointer;
+            }
 
 
         </style>
@@ -262,14 +302,46 @@
             <img src="@{'public/images/Shield_Water.jpg'}" alt="Icon" style="width:100%;height:100%;">
         </div>
 
-        <div class="div_space_clicked" id="show_space" style="display:none;">
-            <div   id="pic_clicked_show" class="div_space_clicked_picture"
-                   style="background-size: contain; background-repeat: no-repeat; background-position: center;">
+        #{form @Spaces(), id:'formSpacesClicked'}
+            <div class="div_space_clicked" id="show_space" style="display:none;">
+                <div   id="pic_clicked_show" class="div_space_clicked_picture"
+                       style="background-size: contain; background-repeat: no-repeat; background-position: center;">
+                </div>
+                <label id="loc_clicked_show" class="label_typo2 div_space_clicked_label" style="left: 5%; top: 73%;">a</label>
+                <label id="dat_clicked_show" class="label_typo2 div_space_clicked_label" style="left: 5%; top: 83%;">a</label>
+                <label id="ppl_clicked_show" class="label_typo2 div_space_clicked_label" style="left: 5%; top: 93%;">a</label>
+                <label class="label_typo2 div_space_clicked_label" style="left: 30%; top: 73%;">Schedule:______h</label>
+                <label id="hav_clicked_show" class="label_typo2 div_space_clicked_label" style="left: 45%; top: 73%;">a</label>
+                <label class="button_schedule div_space_clicked_label" style="left: 40%; top: 83%;"
+                       onpointerover="ShowSchedule()">+</label>
+
+                <label class="label_typo2 div_space_clicked_label" style="left: 65%; top: 73%;">Start:</label>
+                <input id="START" class="input_hours" type="text" name="hour_start" style="left: 73%; top: 73%;"/>
+                <label class="label_typo2 div_space_clicked_label" style="left: 84%; top: 73%;">End:</label>
+                <input id="END" class="input_hours" type="text" name="hour_end" style="left: 90%; top: 73%;"/>
+
+                <button type="submit" class="button_RESERVE div_space_clicked_label" style="left: 70%; top: 83%;"
+                        onclick="CreateReserve(event)">CREATE</button>
+
+                <input style="display:none;" type="text" id="creating_bool" name="do_reserve"/>
+                <input style="display:none;" type="text" id="creating_id" name="id"/>
+                <input style="display:none;" type="text" id="creating_new_schedule" name="new_schedule"/>
+                <input style="display:none;" type="text" id="creating_schedule_meeting" name="schedule_meeting"/>
+                <input style="display:none;" type="text" id="creating_people" name="number_people"/>
+
+                <div id="schedule_clicked" class="div_space_clicked_schedule" style="display: none;">
+                    <label class="label_typo2 div_space_clicked_label" style="left: 5%; top: 10%;">HOURS TAKEN:</label>
+                    <label id="tkn_clicked_show" class="label_typo2 div_space_clicked_label" style="left: 10%; top: 30%;">a</label>
+                </div>
+
+                <label id="try1" class="label_typo2 div_space_clicked_label" style="left: 60%; top: 83%;">Start:</label>
+                <label id="try2" class="label_typo2 div_space_clicked_label" style="left: 60%; top: 93%;">Start:</label>
+                <label id="try3" class="label_typo2 div_space_clicked_label" style="left: 90%; top: 83%;">Start:</label>
+                <label id="try4" class="label_typo2 div_space_clicked_label" style="left: 90%; top: 93%;">Start:</label>
+
+                <label class="label_typo1" id="check_hours" style="color: red; display:none; left: 27%; top: 90%;">Check the selected hours</label>
             </div>
-            <label id="loc_clicked_show" class="label_typo2 div_space_clicked_location">a</label>
-            <label id="dat_clicked_show" class="label_typo2 div_space_clicked_date">a</label>
-            <label id="ppl_clicked_show" class="label_typo2 div_space_clicked_people">a</label>
-        </div>
+        #{/form}
 
         <div class="div_container">
             <div class="div_scroll">
@@ -300,6 +372,9 @@
                                             <label  id="${space.id} loc" class="label_typo1 label_location_space">${space.location}</label>
                                             <label  id="${space.id} dat" class="label_typo1 label_date_space">${space.date}</label>
                                             <label  id="${space.id} ppl" class="label_typo1 label_people_space">${space.numberPeople} PEOPLE</label>
+                                            <label  id="${space.id} hav" style="display: none;">${space.schedule_start} - ${space.schedule_end}</label>
+                                            <label  id="${space.id} tkn" style="display: none;">${space.schedule}</label>
+                                            <label  id="iden" style="display: none;">${space.iden}</label>
                                         </div>
                                     </td>
                                 </tr>
@@ -322,16 +397,122 @@
                             var clicked_loc = document.getElementById(clicked_id + " loc").innerHTML;
                             var clicked_dat = document.getElementById(clicked_id + " dat").innerHTML;
                             var clicked_ppl = document.getElementById(clicked_id + " ppl").innerHTML;
+                            var clicked_hav = document.getElementById(clicked_id + " hav").innerHTML;
+                            var clicked_tkn = document.getElementById(clicked_id + " tkn").innerHTML;
                             document.getElementById("pic_clicked_show").style.background = clicked_pic;
                             document.getElementById("loc_clicked_show").innerHTML = clicked_loc;
                             document.getElementById("dat_clicked_show").innerHTML = clicked_dat;
                             document.getElementById("ppl_clicked_show").innerHTML = clicked_ppl;
+                            document.getElementById("hav_clicked_show").innerHTML = clicked_hav;
+                            document.getElementById("tkn_clicked_show").innerHTML = clicked_tkn;
+
+                            var identifier = document.getElementById("iden").innerHTML;
+                            document.getElementById("creating_id").value = identifier;
+                            var people = document.getElementById("ppl_clicked_show").innerHTML;
+                            document.getElementById("creating_people").value = people;
                         }
                         else
                         {
                             document.getElementById("show_space").style.display = "none";
                         }
                     }
+
+                    function ShowSchedule(){
+                        var state = document.getElementById("schedule_clicked").style.display;
+
+                        if(state == "inline"){
+                            document.getElementById("schedule_clicked").style.display = "none";
+                        }
+                        else{
+                            document.getElementById("schedule_clicked").style.display = "inline";
+                        }
+                    }
+
+                    function CreateReserve(event){
+
+                        var range_hours = document.getElementById("hav_clicked_show").innerHTML;
+                        let schedule_range = range_hours.split("-");
+                        var min_hour = schedule_range[0];
+                        var max_hour = schedule_range[1];
+
+                        var hour_start = document.getElementById("START").value;
+                        var hour_end = document.getElementById("END").value;
+
+                        document.getElementById("try1").innerHTML = min_hour;
+                        document.getElementById("try2").innerHTML = max_hour;
+                        document.getElementById("try3").innerHTML = hour_start;
+                        document.getElementById("try4").innerHTML = hour_end;
+
+                        if ((hour_start < hour_end) )
+                        {
+                            var taken_hours = document.getElementById("tkn_clicked_show").innerHTML;
+                            let hour_range = taken_hours.split(" ");
+                            let i = 0;
+                            let found = 0;
+
+                            let pos1 = 0;
+                            let pos2 = 0;
+                            while ((i < hour_range.length) && (found === 0)) {
+                                let hours = hour_range[i].split("-").map(Number);
+
+                                if ((hour_end <= hours[0]) && (hour_start >= min_hour)) {
+                                    pos2 = hours[0];
+                                } else if ((hour_start >= hours[1]) && (hour_end <= max_hour)) {
+                                    pos1 = hours[1];
+                                }
+
+                                if ((hour_start >= hours[0]) && (hour_start <= hours[1]) && (hour_end >= hours[0]) && (hour_end <= hours[1])) {
+                                    found = 2;
+                                } else if ((hour_start <= hours[0]) && (hour_end >= hours[1])) {
+                                    found = 2;
+                                } else {
+                                    if ((pos1 !== 0) && (pos2 !== 0)) {
+                                        found = 1;
+                                    } else {
+                                        i++;
+                                    }
+                                }
+                            }
+                            let final = "";
+
+                            if (found === 1) {
+                                let j = 0;
+                                while (j < hour_range.length) {
+                                    if (j === i) {
+                                        final += hour_start + "-" + hour_end + " ";
+                                    }
+
+                                    final += hour_range[j] + " ";
+
+                                    j++;
+                                }
+                                document.getElementById("creating_new_schedule").value = final;
+                                document.getElementById("creating_schedule_meeting").value = hour_start + "-" + hour_end;
+                                document.getElementById("creating_bool").value = "true";
+
+                            } else if (found === 0) {
+                                if (pos1 === 0) {
+                                    pos1 = min_hour;
+                                    final = hour_start + "-" + hour_end + " " + taken_hours + " error0";
+                                } else if (pos2 === 0) {
+                                    pos2 = max_hour;
+                                    final = taken_hours + " " + hour_start + "-" + hour_end + " error0";
+                                }
+                                document.getElementById("creating_new_schedule").value = final;
+                                document.getElementById("creating_schedule_meeting").value = hour_start + "-" + hour_end;
+                                document.getElementById("creating_bool").value = "true";
+
+                            } else if (found === 2) {
+                                document.getElementById("check_hours").style.display = "block";
+                                event.preventDefault();
+                            }
+                        }
+                        else{
+                            document.getElementById("check_hours").style.display = "block";
+                            event.preventDefault();
+                        }
+                    }
+
                 </script>
 
                 <!--
