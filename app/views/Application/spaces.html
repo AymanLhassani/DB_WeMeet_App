@@ -431,7 +431,7 @@
                     function CreateReserve(event){
 
                         var range_hours = document.getElementById("hav_clicked_show").innerHTML;
-                        let schedule_range = range_hours.split("-");
+                        let schedule_range = range_hours.split("-").map(Number);
                         var min_hour = schedule_range[0];
                         var max_hour = schedule_range[1];
 
@@ -443,7 +443,7 @@
                         document.getElementById("try3").innerHTML = hour_start;
                         document.getElementById("try4").innerHTML = hour_end;
 
-                        if ((hour_start < hour_end) )
+                        if ((hour_start < hour_end) && (hour_start >= min_hour) && (hour_end <= max_hour))
                         {
                             var taken_hours = document.getElementById("tkn_clicked_show").innerHTML;
                             let hour_range = taken_hours.split(" ");
