@@ -4,24 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b91cc7c5-d5b1-49ba-ad96-73e8ee6504c1" name="Changes" comment="Update general">
+    <list default="true" id="b91cc7c5-d5b1-49ba-ad96-73e8ee6504c1" name="Changes" comment="Update schedules">
+      <change afterPath="$PROJECT_DIR$/app/views/Application/admin.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WeMeet-App.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeMeet-App.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bootstrap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/MEETING.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/MEETING.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/SPACEMEETING.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/SPACEMEETING.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/USER.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/USER.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/Application/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/Application/spaces.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/spaces.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/Bootstrap" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/Bootstrap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_spaces.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_spaces.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Meeting" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Meeting" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.SpaceMeeting" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.SpaceMeeting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.USER" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.USER" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/Bootstrap.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/Bootstrap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/models/SpaceMeeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/SpaceMeeting.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/models/USER.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/USER.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +104,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -204,7 +207,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732878083355</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update schedules">
+      <option name="closed" value="true" />
+      <created>1737076520093</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1737076520093</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Update schedules">
+      <option name="closed" value="true" />
+      <created>1737076768594</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1737076768594</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,6 +265,7 @@
     <MESSAGE value="Update PROFILE (to perfect)" />
     <MESSAGE value="Merge remote-tracking branch 'origin/Enric' into Enric&#10;&#10;# Conflicts:&#10;#&#9;WeMeet-App.iws&#10;#&#9;app/controllers/Application.java&#10;#&#9;app/views/Application/home.html&#10;#&#9;app/views/Application/init.html&#10;#&#9;app/views/Application/login.html&#10;#&#9;app/views/Application/profile.html&#10;#&#9;tmp/bytecode/DEV/controllers.Application&#10;#&#9;tmp/classes/controllers/Application.class" />
     <MESSAGE value="Update general" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update general" />
+    <MESSAGE value="Update schedules" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update schedules" />
   </component>
 </project>

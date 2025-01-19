@@ -46,11 +46,12 @@
             background-color:#34A028;
         }
 
-        .div_options {
-
-            margin-bottom:0%;
-            margin-left:0.2%;
-            margin-right:60%;
+        .div_black {
+            position: absolute;
+            top: 20%;
+            bottom:10%;
+            left:0.7%;
+            right:60%;
 
             border-style:solid;
             border-top:none;
@@ -63,10 +64,33 @@
             font-size:25px;
             font-family: Perpetua;
         }
-        .button_passwd {
-            background-color:#FFE6A9;
+        .div_options {
+            position: absolute;
+            top: 10%;
+            bottom:10%;
+            left:27%;
+            right:10%;
+
+            border-style:solid;
+            border-top:none;
+
+            padding:50px;
+
+            background-color: #8FD14F;
             text-align:center;
+
             font-size:25px;
+            font-family: Perpetua;
+        }
+        .button_options {
+            position:absolute;
+
+            left:15%;
+            right:15%;
+
+            background-color:#31711E;
+            text-align:center;
+            font-size:20px;
             font-family: Impact;
 
             transition-duration: 0.4s;
@@ -76,32 +100,81 @@
             border-radius: 5px;
             padding: 15px;
         }
-        .button_passwd:hover {
+        .button_options:hover {
             background-color:#34A028;
         }
-        .button_delete {
-            background-color:#FFE6A9;
+
+        .div_stats {
+            position: absolute;
+            top: 20%;
+            bottom:10%;
+            left:42.5%;
+            right:37.5%;
+
+            border-style:solid;
+            padding:50px;
+
+            background-color: #31711E;
             text-align:center;
-            font-size:25px;
+        }
+
+        .div_label_stats{
+            background-color:#8FD14F;
+            height:25px;
+            border-radius: 5px;
+
+            position:absolute;
+            left:10%;
+            right:50%;
+        }
+
+        .label_params{
+            font-size:20px;
             font-family: Impact;
+            color: #1A1A19;
+
+            position:absolute;
+            left:52.5%;
+        }
+
+        .label_stats{
+            font-size:15px;
+            font-family: Impact;
+            position:absolute;
+            top:4px;
+            left:10px;
+        }
+
+        .button_show_spaces{
+            background-color:#8FD14F;
+            text-align:center;
+
+            position:absolute;
+            left:20%;
+            right:20%;
+            padding: 10px;
 
             transition-duration: 0.4s;
-            cursor: pointer;
 
-            color:#2A2A19;
+            font-size:20px;
+            color: #1A1A19;
+            font-family: Impact;
             border-radius: 5px;
-            padding: 15px;
         }
-        .button_delete:hover {
+        .button_show_spaces:hover {
             background-color:#34A028;
+            cursor: pointer;
         }
+
+
+
+
+        /* FORMS - SUBMITS*/
 
         .question {
             font-size:20px;
             font-family: Impact;
         }
-
-
         .input_password{
             font-size:20px;
             font-family: Perpetua;
@@ -126,8 +199,8 @@
 
         /* Add a red background color to the cancel button */
         .cancel {
-        margin-top:15px;
-          background-color: red;
+            margin-top:15px;
+            background-color: red;
         }
 
         /* Add some hover effects to buttons */
@@ -142,9 +215,10 @@
           display: none;
 
           position: fixed;
+          top:20%;
           bottom: 40%;
-          right: 15%;
-          left: 55%;
+          right: 10%;
+          left: 65%;
           padding: 15px;
 
           text-align:center;
@@ -157,7 +231,6 @@
         .form-container_PASSWORD {
           max-width: 300px;
           padding: 10px;
-          background-color: white;
         }
 
         /* Full-width input fields */
@@ -182,9 +255,10 @@
           display: none;
 
           position: fixed;
+          top:20%;
           bottom: 50%;
-          right: 15%;
-          left: 55%;
+          right: 10%;
+          left: 65%;
           padding: 15px;
 
           text-align:center;
@@ -197,7 +271,6 @@
         .form-container_DELETE {
           max-width: 300px;
           padding: 10px;
-          background-color: white;
         }
 
         /* Full-width input fields */
@@ -214,6 +287,134 @@
           background-color: #ddd;
           outline: none;
         }
+
+        /* FORMS SHOW SPACES RENTED */
+
+        /*Container que permet fer scroll*/
+            .div_container{
+                display:none;
+                overflow: auto;
+                position:fixed;
+                left: 65%;
+                right: 0.7%;
+                top: 20%;
+                bottom: 10%;
+
+                border-style: solid;
+            }
+
+            /*Anunci de cada un dels spaces*/
+            .div_space_cover{
+                border-style: solid;
+                background-color: #FFE6A9;
+
+                position: relative;
+                left: 10%;
+                width: 80%;
+                padding: 0px;
+                margin-top:15%;
+                height: 125px;
+            }
+            .div_border{
+                border-style: solid;
+                background-color: #8FD14F;
+
+                position: absolute;
+                left: 120px;
+                height: 121px;
+                width: 0px;
+            }
+            .div_picture{
+                position: absolute;
+                width:120px;
+                height: 125px;
+            }
+            .label_location_space{
+                position: absolute;
+                left: 150px;
+                top: 25px;
+            }
+            .label_date_space{
+                position: absolute;
+                left: 150px;
+                top: 75px;
+            }
+            .label_people_space{
+                position: absolute;
+                left: 250px;
+                top: 75px;
+            }
+
+            /*Disseny taula que conte els anuncis dels spaces*/
+            .table_containers{
+                border: 3px solid black;
+                width:90%;
+                position: absolute;
+                top:5%;
+                left: 5%;
+            }
+
+            /* SCROLLBAR */
+            /* width */
+            ::-webkit-scrollbar {
+                width: 10px;
+            }
+
+            /* Track */
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: #888;
+            }
+
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background: #555;
+            }
+
+            /*Barra dels resultats de la busqueda*/
+            .div_inputs_search {
+                position:absolute;
+                top:20%;
+                left:10%;
+                right:10%;
+                z-index: 2;
+
+                border-style:solid;
+                border-radius:15px;
+
+                padding:10px;
+
+                background-color:#FFE6A9;
+                text-align:center;
+
+                font-size:25px;
+                font-family: Perpetua;
+            }
+
+            /*Millor display del scroll. Fa que desapareixi al passar per sota la barra de busqueda*/
+            .div_top_scroll_invisible{
+                position:sticky;
+                background-color: #8FD14F;
+                left: 10%;
+                right: 10%;
+                top: 0%;
+                bottom: 80%;
+                z-index: 2;
+            }
+
+            .label_typo1{
+                font-size:17.5px;
+                font-family: Perpetua;
+            }
+            .label_typo2{
+                font-size:20px;
+                font-family: Impact;
+            }
+
 
     </style>
 </head>
@@ -235,14 +436,50 @@
     <p style="display:inline;">
 
     </p>
-    <div class="div_options">
-        <p>
-            <a class="button_passwd" onclick="openFormPassword()">CHANGE PASSWORD</a>
-        </p>
-        <br>
-        <p>
-            <a class="button_delete" onclick="openFormDelete()">DELETE ACCOUNT</a>
-        </p>
+    <div class="div_black">
+        <div class="div_options">
+            <p>
+                <a class="button_options" style="top:10%;" onclick="openFormPassword()">CHANGE PASSWORD</a>
+            </p>
+            <br>
+            <p>
+                <button class="button_options" type="submit" style="top:30%; border:none;" onclick="logoutUser()">LOG OUT</button>
+                <input style="display:none;" type="text" id="logout_confirm" name="do_logout"/>
+            </p>
+            <br>
+            <p>
+                <a class="button_options" style="top:50%; background-color: red;" onclick="openFormDelete()">DELETE ACCOUNT</a>
+            </p>
+            <br>
+        </div>
+    </div>
+
+    <div class="div_stats">
+
+        <div class="div_label_stats" style="top:5%;">
+            <label class="label_stats">${ConnectedUser.Name}</label>
+        </div>
+        <label class="label_params" style="top:5%;">Name</label>
+
+        <div class="div_label_stats" style="top:15%;">
+            <label class="label_stats">${ConnectedUser.Password}</label>
+        </div>
+        <label class="label_params" style="top:15%;">Password</label>
+
+        <div class="div_label_stats" style="top:25%;">
+            <label class="label_stats">${ConnectedUser.numberTimesRent}</label>
+        </div>
+        <label class="label_params" style="top:25%;">Times Rented</label>
+
+        <div class="div_label_stats" style="top:35%;">
+            <label class="label_stats">${ConnectedUser.numberTimesTenant}</label>
+        </div>
+        <label class="label_params" style="top:35%;">Times Tenant</label>
+
+        <a class="button_show_spaces" style="top:50%;" onclick="openSpacesRented()">RENTED SPACES</a>
+
+        <a class="button_show_spaces" style="top:65%;" onclick="openSpacesTenant()">TENANT SPACES</a>
+
     </div>
 
     <div class="form-popup_PASSWORD" id="myFormPassword">
@@ -273,11 +510,87 @@
         </form>
     </div>
 
+    <div id="container_rented" class="div_container">
+
+        <div class="div_top_scroll_invisible">
+            <div class="div_inputs_search">
+                <label class="label_typo2" style="text-align:center;">SPACES - RENTED</label>
+            </div>
+        </div>
+
+        #{if spaces_rented}
+        <table class="table_containers">
+            <tr >
+                <th></th>
+            </tr>
+
+            #{list items:spaces_rented, as:'space'}
+            <tr>
+                <td>
+                    <div class="div_space_cover">
+                        <div class="div_border"></div>
+                        <div class="div_picture" about="url(${space.imagepath});" style="background: url(${space.imagepath}); background-size: cover;
+                             background-repeat: no-repeat; background-position: center; ">
+                        </div>
+                        <label class="label_typo1 label_location_space">${space.location}</label>
+                        <label class="label_typo1 label_date_space">${space.date}</label>
+                        <label class="label_typo1 label_people_space">${space.numberPeople} PEOPLE</label>
+                        <label style="display: none;">${space.schedule_start} - ${space.schedule_end}</label>
+                        <label style="display: none;">${space.schedule}</label>
+                        <label style="display: none;">${space.iden}</label>
+                    </div>
+                </td>
+            </tr>
+            #{/list}
+        </table>
+        #{/if}
+    </div>
+
+    <div id="container_tenant" class="div_container">
+
+        <div class="div_top_scroll_invisible">
+            <div class="div_inputs_search">
+                <label class="label_typo2" style="text-align:center;">SPACES - TENANT</label>
+            </div>
+        </div>
+
+        #{if spaces_tenant}
+        <table class="table_containers">
+            <tr>
+                <th></th>
+            </tr>
+
+            #{list items:spaces_tenant, as:'space'}
+            <tr style="border: 1px solid black  ;">
+                <td >
+                    <div class="div_space_cover">
+                        <div    class="div_border"></div>
+                        <div class="div_picture" about="url(${space.imagepath});" style="background: url(${space.imagepath}); background-size: cover;
+                             background-repeat: no-repeat; background-position: center; ">
+                        </div>
+                        <label class="label_typo1 label_location_space">${space.location}</label>
+                        <label class="label_typo1 label_date_space">${space.date}</label>
+                        <label class="label_typo1 label_people_space">${space.numberPeople} PEOPLE</label>
+                        <label style="display: none;">${space.schedule_start} - ${space.schedule_end}</label>
+                        <label style="display: none;">${space.schedule}</label>
+                        <label style="display: none;">${space.iden}</label>
+                    </div>
+                </td>
+            </tr>
+            #{/list}
+        </table>
+        #{/if}
+    </div>
+
+    #{/form}
 
     <script>
 
         function openFormPassword() {
             document.getElementById("myFormPassword").style.display = "block";
+            document.getElementById("myFormDelete").style.display = "none";
+            document.getElementById("container_rented").style.display = "none";
+            document.getElementById("container_tenant").style.display = "none";
         }
 
         function closeFormPassword() {
@@ -286,6 +599,9 @@
 
         function openFormDelete() {
             document.getElementById("myFormDelete").style.display = "block";
+            document.getElementById("myFormPassword").style.display = "none";
+            document.getElementById("container_rented").style.display = "none";
+            document.getElementById("container_tenant").style.display = "none";
         }
 
         function closeFormDelete() {
@@ -311,8 +627,27 @@
         function deleteUser() {
             document.getElementById("delete_confirm").value = "true";
         }
+
+        function logoutUser(){
+             document.getElementById("logout_confirm").value = "true";
+        }
+
+        function openSpacesRented() {
+            document.getElementById("container_rented").style.display = "block";
+            document.getElementById("container_tenant").style.display = "none";
+            document.getElementById("myFormPassword").style.display = "none";
+            document.getElementById("myFormDelete").style.display = "none";
+        }
+
+        function openSpacesTenant() {
+            document.getElementById("container_tenant").style.display = "block";
+            document.getElementById("container_rented").style.display = "none";
+            document.getElementById("myFormPassword").style.display = "none";
+            document.getElementById("myFormDelete").style.display = "none";
+        }
+
     </script>
 
-    #{/form}
+
 </body>
 </html>

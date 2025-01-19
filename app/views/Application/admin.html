@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <title>WeMEET - Home</title>
+      <style>
+
+        .div_menu_bar {
+            margin:auto;
+            padding:10px;
+
+            border-style:solid;
+            background-color:#1A1A19;
+            width:98%;
+        }
+
+        body{
+            background-color:#8FD14F;
+        }
+        h1 {
+            display:inline;
+
+            color:#31711E;
+            font-size:60px;
+            font-family: Eras ITC;
+            margin-left: 10%;
+        }
+        .label{
+
+        }
+        .label_name {
+            color: #FFE6A9;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: Perpetua;
+            position: fixed;
+            margin-top: 22.5px;
+            right: 20%;
+        }
+        .button{
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .button_profile {
+            font-size:25px;
+            font-family: Impact;
+            color:#2A2A19;
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px;
+            position: fixed;
+            margin-top: 11.5px;
+            right: 10%;
+        }
+        .button_profile:hover {
+            background-color:#34A028;
+        }
+
+        .div_users {
+            overflow: auto;
+            position:fixed;
+            right: 20%;
+            left: 20%;
+            top: 20%;
+            bottom: 60%;
+
+            border-style:solid;
+            background-color: white;
+
+        }
+        .div_spaces {
+            overflow: auto;
+            position:fixed;
+            right: 15%;
+            left: 15%;
+            top: 45%;
+            bottom: 35%;
+
+            border-style:solid;
+            background-color: white;
+            text-align:center;
+        }
+        .div_meetings {
+            overflow: auto;
+            position:fixed;
+            right: 20%;
+            left: 20%;
+            top: 70%;
+            bottom: 10%;
+
+            border-style:solid;
+            background-color: white;
+            text-align:center;
+        }
+
+        .table_container{
+            table-layout: fixed;
+        }
+        .header_display{
+            top: 0px;
+            position: sticky;
+            font-size:20px;
+            font-family: Perpetua;
+            text-align: center;
+
+            background-color: black;
+            color: white;
+        }
+        .table_display{
+            font-size:20px;
+            font-family: Perpetua;
+            text-align: center;
+
+        }
+      </style>
+    </head>
+
+    <body>
+    #{form @Admin(), id:'formLogOut'}
+        <div class="div_menu_bar">
+            <h1>WeMEET</h1>
+            <label class="label label_name">${username} </label>
+            <button class="button button_profile" type="submit" onclick="logoutUser()">LOG OUT</button>
+            <input style="display:none;" type="text" id="logout_confirm" name="do_logout"/>
+
+        </div>
+    #{/form}
+
+
+        <div class="div_users">
+            #{form @Admin(), id:'formUsers'}
+                #{if list_of_spaces}
+                    <table class="table_container">
+                        <tr>
+                            <th class="header_display">Name</th>
+                            <th class="header_display">Password</th>
+                            <th class="header_display">Times Rented</th>
+                            <th class="header_display">Times Tenant</th>
+                            <th class="header_display">Admin</th>
+                        </tr>
+
+                        #{list items:list_of_users, as:'user'}
+                        <tr style="border: 1px solid black  ;">
+                            <td class="table_display">${user.Name}</td>
+                            <td class="table_display">${user.Password}</td>
+                            <td class="table_display">${user.numberTimesRent}</td>
+                            <td class="table_display">${user.numberTimesTenant}</td>
+                            <td class="table_display">${user.admin}</td>
+                        </tr>
+                      #{/list}
+                    </table>
+                #{/if}
+            #{/form}
+        </div>
+
+        <div class="div_spaces">
+            #{form @Admin(), id:'formSpaces'}
+                #{if list_of_spaces}
+                    <table class="table_containers">
+                        <tr>
+                            <th class="header_display">ID</th>
+                            <th class="header_display"># People</th>
+                            <th class="header_display">Date</th>
+                            <th class="header_display">Location</th>
+                            <th class="header_display">Start</th>
+                            <th class="header_display">End</th>
+                            <th class="header_display">Schedule</th>
+                            <th class="header_display">TV</th>
+                            <th class="header_display">Image Path</th>
+                            <th class="header_display">ID renter</th>
+                        </tr>
+
+                        #{list items:list_of_spaces, as:'space'}
+                        <tr style="border: 1px solid black  ;">
+                            <td class="table_display">${space.iden}</td>
+                            <td class="table_display">${space.numberPeople}</td>
+                            <td class="table_display">${space.date}</td>
+                            <td class="table_display">${space.location}</td>
+                            <td class="table_display">${space.schedule_start}</td>
+                            <td class="table_display">${space.schedule_end}</td>
+                            <td class="table_display">${space.schedule}</td>
+                            <td class="table_display">${space.tv}</td>
+                            <td class="table_display">${space.imagepath}</td>
+                            <td class="table_display">${space.User_Renter.Name}</td>
+                        </tr>
+                        #{/list}
+                    </table>
+                #{/if}
+            #{/form}
+        </div>
+
+        <div class="div_meetings">
+            #{form @Admin(), id:'formMeets'}
+                #{if list_of_meets}
+                    <table class="table_containers">
+                        <tr>
+                            <th class="header_display">Number People</th>
+                            <th class="header_display">Schedule</th>
+                            <th class="header_display">ID space</th>
+                            <th class="header_display">ID reserve</th>
+                        </tr>
+
+                        #{list items:list_of_meets, as:'meet'}
+                        <tr style="border: 1px solid black  ;">
+                            <td class="table_display">${meet.numberPeopleMeeting}</td>
+                            <td class="table_display">${meet.schedule}</td>
+                            <td class="table_display">${meet.Space_Reserve.iden}</td>
+                            <td class="table_display">${meet.User_Reserve.Name}</td>
+                        </tr>
+                        #{/list}
+                    </table>
+                #{/if}
+            #{/form}
+        </div>
+
+        <script>
+            function logoutUser(){
+                 document.getElementById("logout_confirm").value = "true";
+            }
+        </script>
+
+    </body>
+</html>
+
+<!-- <button onclick="window.location.href='destination.html'">Click Me!</button> -->
