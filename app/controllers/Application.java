@@ -3,6 +3,9 @@ package controllers;
 import com.mchange.v1.identicator.IdList;
 import org.h2.engine.User;
 import play.mvc.*;
+import play.*;
+import java.util.*;
+
 
 import models.*;
 
@@ -37,9 +40,16 @@ public class Application extends Controller
         renderTemplate("Application/profile.html");
     }
 
+    static String username;
     public static USER User_Service;
     public static int cont_login = 0;
     public static int cont_register = 0;
+
+
+    @Before
+    static void connectedUser() {
+        username = session.get("user");
+    }
 
     public static void Register(String n, String p)
     {
@@ -80,9 +90,15 @@ public class Application extends Controller
         }
         else
         {
+            session.put("user", u.Name);  // Store user in session
             User_Service = u;
-            Home(false,"", "", "");
+            Home(false, "", "", "");
         }
+    }
+
+    public static void TancaSessio(){
+        session.clear();
+        renderText("Usuari "+ username + "ha tancat la sessió");
     }
 
     public static void Home(boolean do_spaces, String location, String date, String people)
