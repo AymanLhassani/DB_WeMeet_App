@@ -259,8 +259,7 @@
                 color: #1A1A19;
                 font-family: Impact;
                 border-radius: 5px;
-                width: 80px;
-
+                padding: 5px;
             }
             .button_RESERVE:hover {
                 background-color:#B1F0F7;
@@ -425,7 +424,10 @@
                 var hour_start = document.getElementById("START").value;
                 var hour_end = document.getElementById("END").value;
 
-                if ((hour_start < hour_end) && (hour_start >= min_hour) && (hour_end <= max_hour))
+                var a = parseFloat(hour_start);
+                var b = parseFloat(hour_end);
+
+                if ((a < b) && (a >= min_hour) && (b <= max_hour))
                 {
                     var taken_hours = document.getElementById("tkn_clicked_show").innerHTML;
                     let hour_range = taken_hours.split(" ");

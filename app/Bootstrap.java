@@ -53,8 +53,18 @@ public class Bootstrap extends Job {
 
                         while (!Objects.equals(line,"*")) {
                             String[] params = line.split("~");
-                            SPACEMEETING newspace = new SPACEMEETING(Integer.parseInt(params[0]), Integer.parseInt(params[1]), DATE, params[3], Integer.parseInt(params[4]), Integer.parseInt(params[5]), params[6], Boolean.parseBoolean(params[7]), params[8], USER.getUser(params[9]));
-                            newspace.save();
+
+                            if(Objects.equals(params[2], "-"))  //default date set to "today"
+                            {
+                                SPACEMEETING newspace = new SPACEMEETING(Integer.parseInt(params[0]), Integer.parseInt(params[1]), DATE, params[3], Integer.parseInt(params[4]), Integer.parseInt(params[5]), params[6], Boolean.parseBoolean(params[7]), params[8], USER.getUser(params[9]));
+                                newspace.save();
+                            }
+                            else
+                            {
+                                SPACEMEETING newspace = new SPACEMEETING(Integer.parseInt(params[0]), Integer.parseInt(params[1]), params[2], params[3], Integer.parseInt(params[4]), Integer.parseInt(params[5]), params[6], Boolean.parseBoolean(params[7]), params[8], USER.getUser(params[9]));
+                                newspace.save();
+                            }
+
                             line = reader.readLine();
                         }
                     }

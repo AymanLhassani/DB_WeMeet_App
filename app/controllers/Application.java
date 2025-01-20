@@ -66,6 +66,8 @@ public class Application extends Controller
             user.save();
             connectedUser();
             User_Service = user;
+            String user_info = user.iden + "~" + user.Name + "~" + user.Password + "~" + user.numberTimesRent + "~" + user.numberTimesTenant + "~" + user.admin;
+            User_Service.UpdateOnDataBase(rootDirectory + DataBaseDirectory, User_Service.iden, "0", user_info, 0);
             Home(false,"", "", "");
         }
         else if (u != null)  //user already exists
@@ -158,26 +160,23 @@ public class Application extends Controller
             List<SPACEMEETING> all_spaces = SPACEMEETING.findAll();
             SPACEMEETING update_space = all_spaces.get(id - 1);
             update_space.schedule = new_schedule;
-            update_space.UpdateOnDataBase(rootDirectory + DataBaseDirectory, update_space.iden, new_schedule);
+            update_space.UpdateOnDataBase(rootDirectory + DataBaseDirectory, update_space.iden, new_schedule, null, 1);
             System.out.println("ID: " + id);
             update_space.save();
 
             MEETING new_meeting = new MEETING(number_people, schedule_meeting, update_space, User_Service);
             new_meeting.save();
 
+            User_Service.numberTimesRent += 1;
+            User_Service.save();
+            User_Service.UpdateOnDataBase(rootDirectory + DataBaseDirectory, User_Service.iden, String.valueOf(User_Service.numberTimesRent) , null, 1);
+
             Home(false,"", "", "");
         }
         else    //default
         {
-            String[] data_div = new String[3];
-
-            data_div = date_search.split("-");
-
-            String date_year = data_div[0];
-            String date_month = data_div[1];
-            String date_day = data_div[2];
-
-            String date_mod = date_day + "/" + date_month + "/" + date_year;
+            String[] data_div = date_search.split("-");
+            String date_mod = data_div[2] + "/" + data_div[1] + "/" + data_div[0];
 
             List<SPACEMEETING> all_spaces = SPACEMEETING.find("byLocationAndDate", location_search, date_mod).fetch();
             List<SPACEMEETING> spaces = new ArrayList<>();
@@ -199,7 +198,7 @@ public class Application extends Controller
 
     }
 
-    public static void Profile(boolean do_delete, boolean do_update, boolean do_logout, String new_password)
+    public static void Profile(boolean do_delete, boolean do_update, boolean do_logout, boolean do_create_space, String new_password, String space_loc, String space_date, String space_people, String space_start, String space_end, String space_tv, String path_picture )
     {
         if(do_delete)
         {
@@ -214,14 +213,43 @@ public class Application extends Controller
                 USER u = USER.find("byNameAndPassword", User_Service.Name, User_Service.Password).first();
                 u.Password = new_password;
                 u.save();
-                renderTemplate("Application/init.html");    //equivalent to ProfileHTML
+                User_Service = u;
+                User_Service.UpdateOnDataBase(rootDirectory + DataBaseDirectory, User_Service.iden, User_Service.Password, null, 3);
+                Home(false,"", "", "");
             }
         }
-        else if(do_logout){
+        else if(do_logout)
+        {
             User_Service = null;
             username = "";
 
             index();
+        }
+        else if(do_create_space)
+        {
+            String[] data_div = space_date.split("-");
+            String date_mod = data_div[2] + "/" + data_div[1] + "/" + data_div[0];
+
+            System.out.println("PATH: " + path_picture);
+            String[] parts = path_picture.split("\\\\");
+
+            String space_path = "/public/images/" + parts[2];
+            boolean TV = false;
+            if(Objects.equals(space_tv, "yes")){
+                TV = true;
+            }
+            List<SPACEMEETING> spaces = SPACEMEETING.findAll();
+            int id = spaces.size() + 1;
+            SPACEMEETING new_space = new SPACEMEETING(id, Integer.parseInt(space_people), date_mod, space_loc, Integer.parseInt(space_start), Integer.parseInt(space_end), "null", TV, space_path, User_Service);
+            String space_info = id + "~" + space_people + "~" + date_mod + "~" + space_loc + "~" + space_start + "~" + space_end + "~" + "null" + "~" + TV + "~" + space_path + "~" + User_Service.Name + "," + User_Service.Password;
+            new_space.UpdateOnDataBase(rootDirectory + DataBaseDirectory, id, null, space_info, 0);
+            new_space.save();
+
+            User_Service.numberTimesTenant += 1;
+            User_Service.save();
+            User_Service.UpdateOnDataBase(rootDirectory + DataBaseDirectory, User_Service.iden, String.valueOf(User_Service.numberTimesTenant), null, 2);
+
+            Home(false,"", "", "");
         }
         else
         {
@@ -230,10 +258,12 @@ public class Application extends Controller
 
             List<MEETING> meetings_rented = MEETING.find("byUser_Reserve_Iden", User_Service.iden).fetch();
             List<SPACEMEETING> spaces_rented = new ArrayList<>();
-            for(MEETING me : meetings_rented)
+            List<String> rented_schedules = new ArrayList<>();
+            for(MEETING met : meetings_rented)
             {
-                SPACEMEETING sp = SPACEMEETING.find("byIden", me.Space_Reserve.iden).first();
+                SPACEMEETING sp = SPACEMEETING.find("byIden", met.Space_Reserve.iden).first();
                 spaces_rented.add(sp);
+                rented_schedules.add(met.schedule);
             }
 
             List<SPACEMEETING> spaces_tenant = SPACEMEETING.find("byUser_Renter_Iden", User_Service.iden).fetch();
@@ -241,6 +271,7 @@ public class Application extends Controller
             session.put("username", username);
             renderArgs.put("ConnectedUser", User_Service);
             renderArgs.put("spaces_rented", spaces_rented);         //contains only the spaces rented by this user
+            renderArgs.put("rented_schedules", rented_schedules);         //contains only the schedules of every meeting
             renderArgs.put("spaces_tenant", spaces_tenant);         //contains only the spaces "tenant" by this user
             renderTemplate("Application/profile.html");     //equivalent to ProfileHTML
         }

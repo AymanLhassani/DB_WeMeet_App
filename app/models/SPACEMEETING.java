@@ -50,7 +50,7 @@ public class SPACEMEETING extends Model {
         return space;
     }
 
-    public static void UpdateOnDataBase(String Directory, int identifier, String newSchedule){
+    public static void UpdateOnDataBase(String Directory, int identifier, String newSchedule, String newSpace, int mod){
 
         try (BufferedReader reader = new BufferedReader(new FileReader(Directory))) {
             StringBuilder Text = new StringBuilder();
@@ -64,25 +64,45 @@ public class SPACEMEETING extends Model {
             }
             text += line + "\n";
             line = reader.readLine();
-            while(!Objects.equals(line,"*")){
 
-                String[] params = line.split("~");
-                if(Integer.parseInt(params[0]) == identifier){  //si es aquest space, updategem la schedule
-                    if(Objects.equals(params[6], "null")){
-                        params[6] = null;
+            if(mod == 0){
+                while(!Objects.equals(line,"*")){
+
+                    String[] params = line.split("~");
+                    if(Integer.parseInt(params[0]) == identifier - 1){  //si es aquest space, updategem la schedule
+                        text += line + "\n";
+                        text += newSpace + "\n";
+                        Text.append(newSpace).append("\n");
                     }
-                    params[6] = newSchedule;
-                    System.out.println(" " + newSchedule + " " + params[6] + "o");
-                    space_info = params[0] + "~" + params[1] + "~" + params[2] + "~" + params[3] + "~" + params[4] + "~" + params[5] + "~" + params[6] + "~" + params[7] + "~" + params[8] + "~" + params[9];
-                    text += space_info + "\n";
-                    Text.append(space_info).append("\n");
+                    else {
+                        text += line + "\n";
+                        Text.append(line).append("\n");
+                    }
+                    line = reader.readLine();
                 }
-                else {
-                    text += line + "\n";
-                    Text.append(line).append("\n");
-                }
-                line = reader.readLine();
             }
+            else if(mod == 1){
+                while(!Objects.equals(line,"*")){
+
+                    String[] params = line.split("~");
+                    if(Integer.parseInt(params[0]) == identifier){  //si es aquest space, updategem la schedule
+                        if(Objects.equals(params[6], "null")){
+                            params[6] = null;
+                        }
+                        params[6] = newSchedule;
+                        System.out.println(" " + newSchedule + " " + params[6] + "o");
+                        space_info = params[0] + "~" + params[1] + "~" + params[2] + "~" + params[3] + "~" + params[4] + "~" + params[5] + "~" + params[6] + "~" + params[7] + "~" + params[8] + "~" + params[9];
+                        text += space_info + "\n";
+                        Text.append(space_info).append("\n");
+                    }
+                    else {
+                        text += line + "\n";
+                        Text.append(line).append("\n");
+                    }
+                    line = reader.readLine();
+                }
+            }
+
             while(line != null){
                 Text.append(line).append("\n");
                 text += line + "\n";
