@@ -56,13 +56,19 @@ public class Bootstrap extends Job {
 
                             if(Objects.equals(params[2], "-"))  //default date set to "today"
                             {
-                                SPACEMEETING newspace = new SPACEMEETING(Integer.parseInt(params[0]), Integer.parseInt(params[1]), DATE, params[3], Integer.parseInt(params[4]), Integer.parseInt(params[5]), params[6], Boolean.parseBoolean(params[7]), params[8], USER.getUser(params[9]));
+                                USER user = USER.getUser(params[9]);
+                                SPACEMEETING newspace = new SPACEMEETING(Integer.parseInt(params[0]), Integer.parseInt(params[1]), DATE, params[3], Integer.parseInt(params[4]), Integer.parseInt(params[5]), params[6], Boolean.parseBoolean(params[7]), params[8], user);
                                 newspace.save();
+                                user.spaces.add(newspace);
+                                user.save();
                             }
                             else
                             {
-                                SPACEMEETING newspace = new SPACEMEETING(Integer.parseInt(params[0]), Integer.parseInt(params[1]), params[2], params[3], Integer.parseInt(params[4]), Integer.parseInt(params[5]), params[6], Boolean.parseBoolean(params[7]), params[8], USER.getUser(params[9]));
+                                USER user = USER.getUser(params[9]);
+                                SPACEMEETING newspace = new SPACEMEETING(Integer.parseInt(params[0]), Integer.parseInt(params[1]), params[2], params[3], Integer.parseInt(params[4]), Integer.parseInt(params[5]), params[6], Boolean.parseBoolean(params[7]), params[8], user);
                                 newspace.save();
+                                user.spaces.add(newspace);
+                                user.save();
                             }
 
                             line = reader.readLine();
@@ -74,8 +80,10 @@ public class Bootstrap extends Job {
 
                         while (!Objects.equals(line,"*")) {
                             String[] params = line.split("~");
-                            MEETING newmeet = new MEETING(Integer.parseInt(params[0]), params[1], SPACEMEETING.getSpace(Integer.parseInt(params[2])), USER.getUser(params[3]));
+                            USER user = USER.getUser(params[3]);
+                            MEETING newmeet = new MEETING(Integer.parseInt(params[0]), params[1], SPACEMEETING.getSpace(Integer.parseInt(params[2])), user);
                             newmeet.save();
+                            user.meetings.add(newmeet);
                             line = reader.readLine();
                         }
                     }

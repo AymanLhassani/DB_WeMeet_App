@@ -36,8 +36,8 @@ public class USER extends Model {
         this.admin = admin;
     }
 
-    public static USER getUser(String name){
-        String[] params = name.split(",");
+    public static USER getUser(String name_password){
+        String[] params = name_password.split(",");
         USER u = USER.find("byNameAndPassword", params[0], params[1]).first();
         return u;
     }
@@ -57,7 +57,7 @@ public class USER extends Model {
             text += line + "\n";
             line = reader.readLine();
 
-            if(mod == 0){
+            if(mod == 0){   //new user
                 while(!Objects.equals(line,"*")){
 
                     String[] params = line.split("~");
@@ -73,7 +73,7 @@ public class USER extends Model {
                     line = reader.readLine();
                 }
             }
-            else{
+            else if((mod == 1 || (mod == 2) || (mod == 3))){  //update info
                 while(!Objects.equals(line,"*")){
 
                     String[] params = line.split("~");
@@ -92,6 +92,16 @@ public class USER extends Model {
                         Text.append(space_info).append("\n");
                     }
                     else {
+                        text += line + "\n";
+                        Text.append(line).append("\n");
+                    }
+                    line = reader.readLine();
+                }
+            }
+            else{   //delete
+                while(!Objects.equals(line,"*")){
+                    String[] params = line.split("~");
+                    if(Integer.parseInt(params[0]) != identifier){  //si es aquest user, no l'escribim
                         text += line + "\n";
                         Text.append(line).append("\n");
                     }

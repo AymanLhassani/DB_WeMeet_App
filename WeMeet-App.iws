@@ -8,19 +8,19 @@
       <change beforePath="$PROJECT_DIR$/WeMeet-App.iws" beforeDir="false" afterPath="$PROJECT_DIR$/WeMeet-App.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Bootstrap.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/Bootstrap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/MEETING.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/MEETING.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/SPACEMEETING.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/SPACEMEETING.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/USER.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/USER.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/Application/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/Application/spaces.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/Application/spaces.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/Bootstrap" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/Bootstrap" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_spaces.html" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/_app_views_Application_spaces.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/controllers.Application" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Meeting" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.Meeting" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.SpaceMeeting" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.SpaceMeeting" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/bytecode/DEV/models.USER" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/bytecode/DEV/models.USER" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/Bootstrap.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/Bootstrap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/controllers/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmp/classes/models/Meeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/Meeting.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/models/SpaceMeeting.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/SpaceMeeting.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tmp/classes/models/USER.class" beforeDir="false" afterPath="$PROJECT_DIR$/tmp/classes/models/USER.class" afterDir="false" />
     </list>
@@ -230,7 +230,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737308991639</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Update schedules">
+      <option name="closed" value="true" />
+      <created>1737336278688</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1737336278688</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

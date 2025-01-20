@@ -326,6 +326,7 @@
                         <label class="label_typo1" style="margin-right:10%;">${location}</label>
                         <label class="label_typo1">${date}</label>
                         <label class="label_typo1" style="margin-left:10%;">${people} PEOPLE</label>
+                        <label id="num_people_search" style="display:none;">${people}</label>
                     </div>
                 </div>
 
@@ -394,7 +395,7 @@
                     document.getElementById("ide_clicked_show").innerHTML = clicked_ide;
 
                     document.getElementById("creating_id").value = clicked_ide;
-                    var people = document.getElementById("ppl_clicked_show").innerHTML;
+                    var people = document.getElementById("num_people_search").innerHTML;
                     document.getElementById("creating_people").value = people;
                 }
                 else

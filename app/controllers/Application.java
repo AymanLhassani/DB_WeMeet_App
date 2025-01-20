@@ -19,6 +19,8 @@ public class Application extends Controller
 
     public static void index()
     {
+        User_Service = null;
+        username = "";
         session.clear();
         renderTemplate("Application/init.html");
     }
@@ -63,11 +65,13 @@ public class Application extends Controller
         {
             List<USER> all_users = USER.findAll();
             USER user = new USER(all_users.size() + 1, n, p, 0, 0, false).save();
-            user.save();
-            connectedUser();
             User_Service = user;
+            connectedUser();
+
+            User_Service.save();
             String user_info = user.iden + "~" + user.Name + "~" + user.Password + "~" + user.numberTimesRent + "~" + user.numberTimesTenant + "~" + user.admin;
             User_Service.UpdateOnDataBase(rootDirectory + DataBaseDirectory, User_Service.iden, "0", user_info, 0);
+
             Home(false,"", "", "");
         }
         else if (u != null)  //user already exists
@@ -131,9 +135,6 @@ public class Application extends Controller
     public static void Admin(boolean do_logout)
     {
         if(do_logout){
-            User_Service = null;
-            username = "";
-
             index();
         }
         else {
@@ -158,16 +159,25 @@ public class Application extends Controller
         {
             //update schedule space_meeting
             List<SPACEMEETING> all_spaces = SPACEMEETING.findAll();
-            SPACEMEETING update_space = all_spaces.get(id - 1);
-            update_space.schedule = new_schedule;
-            update_space.UpdateOnDataBase(rootDirectory + DataBaseDirectory, update_space.iden, new_schedule, null, 1);
-            System.out.println("ID: " + id);
-            update_space.save();
+            List<MEETING> meetings = MEETING.findAll();
 
-            MEETING new_meeting = new MEETING(number_people, schedule_meeting, update_space, User_Service);
+            SPACEMEETING space_updated = all_spaces.get(id - 1);
+            space_updated.schedule = new_schedule;
+            space_updated.save();
+            space_updated.UpdateOnDataBase(rootDirectory + DataBaseDirectory, space_updated.iden, new_schedule, null, 1);
+
+
+            MEETING new_meeting = new MEETING(number_people, schedule_meeting, space_updated, User_Service);
             new_meeting.save();
+            String meeting_info = number_people + "~" + schedule_meeting + "~" + space_updated.iden + "~" + User_Service.Name + "," + User_Service.Password;
+            new_meeting.UpdateOnDataBase(rootDirectory + DataBaseDirectory, meetings.size(), null, meeting_info, 0);
 
-            User_Service.numberTimesRent += 1;
+            USER user = USER.getUser(User_Service.Name + "," + User_Service.Password);
+            user.meetings.add(new_meeting);
+            user.spaces.add(space_updated);
+            user.numberTimesRent += 1;
+
+            User_Service = user;
             User_Service.save();
             User_Service.UpdateOnDataBase(rootDirectory + DataBaseDirectory, User_Service.iden, String.valueOf(User_Service.numberTimesRent) , null, 1);
 
@@ -202,9 +212,43 @@ public class Application extends Controller
     {
         if(do_delete)
         {
+            /*
+            List<SPACEMEETING> spaces_user = SPACEMEETING.find("byUser_Renter_Iden", User_Service.iden).fetch();
+            List<MEETING> meetings = MEETING.find("byUser_Reserve_Iden", User_Service.iden).fetch();
+            */
+            List<SPACEMEETING> spaces = SPACEMEETING.findAll();
+            List<MEETING> meetings = MEETING.findAll();
+
+            USER user = USER.getUser(User_Service.Name + "," + User_Service.Password);
+            if((user.spaces != null) || (user.spaces.size() != 0)){
+                for(SPACEMEETING sp : user.spaces)
+                {
+                    sp.UpdateOnDataBase(rootDirectory + DataBaseDirectory, sp.iden, null, null, 2);
+                    /*
+                    int i = spaces.size() - 1;
+                    while(sp.iden - 1 < i){
+                        spaces.get(i - 1).iden = i;
+                        spaces.get(i - 1).save();
+                        i--;
+                    }
+                    */
+                    sp.delete();
+                    user.save();
+                }
+            }
+            if((user.meetings != null) || (user.meetings.size() != 0)) {
+                for (MEETING mt : user.meetings) {
+                    String meeting_info = mt.numberPeopleMeeting + "~" + mt.schedule + "~" + mt.Space_Reserve.iden + "~" + user.Name + "," + user.Password;
+                    mt.UpdateOnDataBase(rootDirectory + DataBaseDirectory, meetings.size(), meeting_info, null, 1);
+                    mt.delete();
+                    user.save();
+                }
+            }
+
+            User_Service.UpdateOnDataBase(rootDirectory + DataBaseDirectory, User_Service.iden, null, null, 4);
             USER u = USER.find("byNameAndPassword", User_Service.Name, User_Service.Password).first();
             u.delete();
-            renderTemplate("Application/init.html");    //equivalent to ProfileHTML
+            index();
         }
         else if(do_update)
         {
@@ -212,17 +256,16 @@ public class Application extends Controller
             {
                 USER u = USER.find("byNameAndPassword", User_Service.Name, User_Service.Password).first();
                 u.Password = new_password;
-                u.save();
                 User_Service = u;
+
+                User_Service.save();
                 User_Service.UpdateOnDataBase(rootDirectory + DataBaseDirectory, User_Service.iden, User_Service.Password, null, 3);
+
                 Home(false,"", "", "");
             }
         }
         else if(do_logout)
         {
-            User_Service = null;
-            username = "";
-
             index();
         }
         else if(do_create_space)
@@ -230,22 +273,28 @@ public class Application extends Controller
             String[] data_div = space_date.split("-");
             String date_mod = data_div[2] + "/" + data_div[1] + "/" + data_div[0];
 
-            System.out.println("PATH: " + path_picture);
             String[] parts = path_picture.split("\\\\");
-
             String space_path = "/public/images/" + parts[2];
+
             boolean TV = false;
             if(Objects.equals(space_tv, "yes")){
                 TV = true;
             }
+
             List<SPACEMEETING> spaces = SPACEMEETING.findAll();
             int id = spaces.size() + 1;
+
             SPACEMEETING new_space = new SPACEMEETING(id, Integer.parseInt(space_people), date_mod, space_loc, Integer.parseInt(space_start), Integer.parseInt(space_end), "null", TV, space_path, User_Service);
-            String space_info = id + "~" + space_people + "~" + date_mod + "~" + space_loc + "~" + space_start + "~" + space_end + "~" + "null" + "~" + TV + "~" + space_path + "~" + User_Service.Name + "," + User_Service.Password;
-            new_space.UpdateOnDataBase(rootDirectory + DataBaseDirectory, id, null, space_info, 0);
             new_space.save();
 
-            User_Service.numberTimesTenant += 1;
+            String space_info = id + "~" + space_people + "~" + date_mod + "~" + space_loc + "~" + space_start + "~" + space_end + "~" + "null" + "~" + TV + "~" + space_path + "~" + User_Service.Name + "," + User_Service.Password;
+            new_space.UpdateOnDataBase(rootDirectory + DataBaseDirectory, id, null, space_info, 0);
+
+            USER user = USER.getUser(User_Service.Name + "," + User_Service.Password);
+            user.spaces.add(new_space);
+            user.numberTimesTenant += 1;
+
+            User_Service = user;
             User_Service.save();
             User_Service.UpdateOnDataBase(rootDirectory + DataBaseDirectory, User_Service.iden, String.valueOf(User_Service.numberTimesTenant), null, 2);
 

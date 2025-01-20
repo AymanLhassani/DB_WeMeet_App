@@ -65,9 +65,8 @@ public class SPACEMEETING extends Model {
             text += line + "\n";
             line = reader.readLine();
 
-            if(mod == 0){
+            if(mod == 0){   //new space
                 while(!Objects.equals(line,"*")){
-
                     String[] params = line.split("~");
                     if(Integer.parseInt(params[0]) == identifier - 1){  //si es aquest space, updategem la schedule
                         text += line + "\n";
@@ -81,7 +80,7 @@ public class SPACEMEETING extends Model {
                     line = reader.readLine();
                 }
             }
-            else if(mod == 1){
+            else if(mod == 1){  //update space
                 while(!Objects.equals(line,"*")){
 
                     String[] params = line.split("~");
@@ -99,6 +98,29 @@ public class SPACEMEETING extends Model {
                         text += line + "\n";
                         Text.append(line).append("\n");
                     }
+                    line = reader.readLine();
+                }
+            }
+            else{   //delete space
+                while(!Objects.equals(line,"*")){
+                    String[] parts = line.split("~");
+                    if(Integer.parseInt(parts[0]) != identifier){  //si es aquest space, no l'escribim
+                        text += line + "\n";
+                        Text.append(line).append("\n");
+
+                    }
+                    /*
+                    else{
+                        line = reader.readLine();
+                        while(!Objects.equals(line,"*")){
+                            String[] params = line.split("~");
+                            params[0] = String.valueOf(Integer.parseInt(params[0]) - 1);
+                            space_info = params[0] + "~" + params[1] + "~" + params[2] + "~" + params[3] + "~" + params[4] + "~" + params[5] + "~" + params[6] + "~" + params[7] + "~" + params[8] + "~" + params[9];
+                            text += space_info + "\n";
+                            line = reader.readLine();
+                        }
+                    }
+                    */
                     line = reader.readLine();
                 }
             }
